@@ -9,15 +9,15 @@ html, body {
     overflow-x: hidden; /* Evita el desbordamiento horizontal */
     display: flex;
     flex-direction: column;
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los elementos */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     position: relative;
 }
 
 /* Navegación */
-#menu-toggle {
+.menu-toggle {
     display: none;
 }
-  
+
 /* Estilo del icono de menú hamburguesa */
 .menu-icon {
     display: block;
@@ -27,11 +27,11 @@ html, body {
     font-size: 2rem;
     color: white;
     cursor: pointer;
-    z-index: 200; /* Asegúrate de que quede por encima del menú */
+    z-index: 200; /* Por encima del menú */
 }
-  
-/* Ajusta el estilo del navbar si ya lo tenías definido */
-#navbar {
+
+/* Estilo del navbar */
+.navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -41,15 +41,15 @@ html, body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 25px 0;
 }
-  
+
 /* Estilo del menú (la lista) */
-#navbar ul {
+.navbar ul {
     position: fixed;
     top: 0;
     left: -290px;  /* Inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
-    background: rgb(47, 123, 133);
+    background: #e68a00;
     padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
     flex-direction: column;
@@ -57,14 +57,14 @@ html, body {
     margin: 0;
     list-style: none;
 }
-  
+
 /* Cuando el checkbox está marcado, desplaza el menú a la vista */
-#menu-toggle:checked ~ ul {
+.menu-toggle:checked ~ ul {
     left: 0;
 }
-  
+
 /* Estilos para los enlaces dentro del menú */
-#navbar ul li a {
+.navbar ul li a {
     color: white;
     padding: 13px 30px;
     width: 50%;
@@ -72,11 +72,11 @@ html, body {
     text-decoration: none;
     display: block;
     transition: background 0.3s ease;
-    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    position: relative; /* Para el pseudo-elemento */
 }
 
 /* Pseudo-elemento para la línea blanca debajo */
-#navbar ul li a::before {
+.navbar ul li a::before {
     content: "";
     width: 100%;
     height: 4px;
@@ -90,39 +90,68 @@ html, body {
 }
 
 /* Efecto hover: al pasar el cursor, aparece la línea */
-#navbar ul li a:hover::before {
+.navbar ul li a:hover::before {
     transform: scale3d(1, 1, 1);
 }
 
 /* Efecto para la opción activa: si el enlace tiene la clase "active", la línea se muestra */
-#navbar ul li a.active::before {
+.navbar ul li a.active::before {
     transform: scale3d(1, 1, 1);
 }
 
 /* Efecto hover para el fondo del enlace */
-#navbar ul li a:hover {
-    background: rgb(39, 100, 107);
+.navbar ul li a:hover {
+    background: #b66d00;
 }
 
-/* Estilos del encabezado */
-#header-estilo {
-    background-image: url("/src/assets/images/keyboard.jpg");
+/* Encabezado */
+.header-estilo {
+    position: relative;
     padding: 100px;
     text-align: center;
-    margin-top: 50px; /* Valor para poder ajustar la altura de la navbar */
-    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-position: center; /* Centra la imagen en el fondo */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    margin-top: 50px; /* Ajusta según la altura del navbar */
+    overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
+}
+
+/* Imagen de fondo */
+.header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Overlay semitransparente para oscurecer la imagen */
+.header-estilo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% opacidad */
+    z-index: 0;
+}
+
+/* Aseguramos que el contenido (texto) se muestre por encima del overlay */
+.header-estilo h1,
+.header-estilo h2 {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Contenido del encabezado */
-#header-estilo h1 {
+.header-estilo h1 {
     margin: 5px 0;
     color: rgb(255, 255, 255);
     font-weight: 500;
 }
 
-#header-estilo h2 {
+.header-estilo h2 {
     margin: 5px 0;
     color: rgb(255, 255, 255);
     font-weight: 450;
@@ -130,13 +159,13 @@ html, body {
 }
 
 /* Estilos de título */
-#titulo-principal {
+.titulo-principal {
     color: #ff9900;
     font-size: 500%;
 }
 
 /* Contenido principal */
-#body {
+.body-content {
     color: white;
     padding: 15px;
     text-align: center;
@@ -144,18 +173,18 @@ html, body {
     flex: 1;
 }
 
-#body h1 {
+.body-content h1 {
     font-size: 1.3em;
     margin: 20px 0;
 }
 
-#body h2 {
+.body-content h2 {
     font-size: 1.1em;
     margin: 20px 0;
 }
 
 /* Pie de página */
-footer {
+.footer {
     background-color: rgb(5, 7, 14);
     color: white;
     padding: 10px;
@@ -169,4 +198,72 @@ footer {
     50% {
         opacity: 0;
     }
+}
+
+/* Opcional: Contenedor de textos para encabezados específicos (como en la página de Categorías) */
+.category-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: -50px; /* Ajusta este valor para subir o bajar los textos */
+}
+
+.category-text h1,
+.category-text h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 5px 0;
+    color: #fff;
+}
+
+.category-text h1 {
+    font-weight: 500;
+}
+
+.category-text h2 {
+    font-weight: 450;
+    font-size: 130%;
+}
+
+/* Contenido de las cajas de categorías */
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Caja de categoría */
+.category-box {
+    background: rgb(15, 23, 42);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.category-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.category-box p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.category-button {
+    display: inline-block;
+    background: #ff9900;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.category-button:hover {
+    background: #e08800;
 }
