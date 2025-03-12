@@ -49,7 +49,7 @@ html, body {
     left: -290px;  /* Inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
-    background: #e68a00;
+    background: linear-gradient(to right bottom, gold, chocolate);
     padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
     flex-direction: column;
