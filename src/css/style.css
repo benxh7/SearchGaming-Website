@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* ----- ESTILO GENERAL DE LA PAGINA ----- */
 html, body {
     font-family: "Roboto", sans-serif;
     background-color: rgb(7, 11, 20);
@@ -18,18 +18,53 @@ html, body {
     display: none;
 }
 
-/* Estilo del icono de menú hamburguesa */
+/* Estilo del icono de menú hamburguesa con animación */
 .menu-icon {
     display: block;
     position: fixed;
-    top: 1px;
-    left: 15px; /* Cambia a 'right: 15px;' si prefieres la esquina superior derecha */
-    font-size: 2rem;
-    color: white;
+    top: 13px;
+    left: 13px; /* Cambia a 'right: 15px;' si prefieres la esquina superior derecha */
+    width: 33px;    /* Ancho para acomodar las 3 barras */
+    height: 24px;   /* Alto para acomodar las barras con espacio */
     cursor: pointer;
-    z-index: 200; /* Por encima del menú */
+    z-index: 200;   /* Por encima del menú */
 }
 
+/* Las 3 barras dentro del icono */
+.menu-icon span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    background: #f89c2b;  /* Color original de las barras */
+    border-radius: 3px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease,
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    transform-origin: 4px 0px;
+}
+
+/* Ajusta el origen de transformación de la primera y la tercera barra */
+.menu-icon span:first-child {
+    transform-origin: 0% 0%;
+}
+.menu-icon span:nth-child(3) {
+    transform-origin: 0% 100%;
+}
+
+/* Transformaciones al marcar el checkbox */
+.menu-toggle:checked + .menu-icon span:first-child {
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+.menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+.menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(-2px, -0.5px);
+    background: #232323;
+}
 /* Estilo del navbar */
 .navbar {
     position: fixed;
