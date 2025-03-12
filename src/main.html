@@ -11,17 +11,23 @@
 
     <!-- Menú de navegación -->
     <nav id="navbar">
+        <!-- Checkbox oculto que controlará el estado del menú -->
+        <input type="checkbox" id="menu-toggle">
+        <!-- Label que funciona como botón de menú (hamburguesa) -->
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        
+        <!-- Menú de navegación -->
         <ul>
-            <li class="menu"><a href="/src/main.html">Inicio</a></li>
-            <li class="menu"><a href="/src/pages/categorys.html">Categorias</a></li>
+          <li class="menu"><a href="/src/main.html">Inicio</a></li>
+          <li class="menu"><a href="/src/pages/categorys.html">Categorias</a></li>
         </ul>
-    </nav>
+      </nav>
 
     <body>
         <!-- Encabezado -->
         <header id="header-estilo">
             <h1 id="header-contenido">
-                Fire Gaming
+                Search Gaming
             </h1>
             <!-- Contenedor del mensaje -->
             <h2 class="mensaje-dinamico"></h2>

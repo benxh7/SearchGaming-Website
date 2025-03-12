@@ -14,66 +14,94 @@ html, body {
 }
 
 /* Navegación */
+#menu-toggle {
+    display: none;
+}
+  
+/* Estilo del icono de menú hamburguesa */
+.menu-icon {
+    display: block;
+    position: fixed;
+    top: 1px;
+    left: 15px; /* Cambia a 'right: 15px;' si prefieres la esquina superior derecha */
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 200; /* Asegúrate de que quede por encima del menú */
+}
+  
+/* Ajusta el estilo del navbar si ya lo tenías definido */
 #navbar {
-    background: rgb(5, 7, 14); /* Fondo oscuro translúcido */
-    padding: 15px 0;
-    position: fixed; /* Fijar la barra en la parte superior */
-    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 100;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background: rgb(5, 7, 14);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px 0;
 }
-
-/* Navegación */
+  
+/* Estilo del menú (la lista) */
 #navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    position: fixed;
+    top: 0;
+    left: -290px;  /* Inicia fuera de la pantalla */
+    width: 200px;
+    height: 100%;
+    background: rgb(47, 123, 133);
+    padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
-    justify-content: center; /* Centrar opciones */
-    align-items: center;
+    flex-direction: column;
+    transition: left 0.3s ease;
+    margin: 0;
+    list-style: none;
 }
-
-/* Elementos */
-#navbar ul li {
-    margin: 0 20px;
+  
+/* Cuando el checkbox está marcado, desplaza el menú a la vista */
+#menu-toggle:checked ~ ul {
+    left: 0;
 }
-
-/* Enlaces */
+  
+/* Estilos para los enlaces dentro del menú */
 #navbar ul li a {
-    text-decoration: none;
     color: white;
-    font-weight: 500;
-    font-size: 1.1em;
-    padding: 10px 15px;
-    border-radius: 8px; /* Bordes suaves */
-    transition: 0.3s ease-in-out;
-    position: relative; /* Para animaciones antes del enlace */
+    padding: 13px 30px;
+    width: 50%;
+    margin: 0 auto; /* Centra el elemento */
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
 }
 
-/* Efecto hover */
-#navbar ul li a:hover {
-    background: rgb(15 23 42); /* Color destacado */
-    color: #fff;
-}
-
-#navbar ul li.menu a::before {
+/* Pseudo-elemento para la línea blanca debajo */
+#navbar ul li a::before {
     content: "";
     width: 100%;
     height: 4px;
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #ffffff; /* Color de la animación de la barra */
-    transition: 0.5s transform ease;
-    transform: scale3d(0,1,1);
+    background: #ffffff;
+    transition: transform 0.5s ease;
+    transform: scale3d(0, 1, 1);
     transform-origin: 50% 50%;
 }
 
-/* Cuando el enlace con .menu-3 es hover */
-#navbar ul li.menu a:hover::before {
-    transform: scale3d(1,1,1);
+/* Efecto hover: al pasar el cursor, aparece la línea */
+#navbar ul li a:hover::before {
+    transform: scale3d(1, 1, 1);
+}
+
+/* Efecto para la opción activa: si el enlace tiene la clase "active", la línea se muestra */
+#navbar ul li a.active::before {
+    transform: scale3d(1, 1, 1);
+}
+
+/* Efecto hover para el fondo del enlace */
+#navbar ul li a:hover {
+    background: rgb(39, 100, 107);
 }
 
 /* Estilos del encabezado */
