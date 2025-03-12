@@ -3,9 +3,9 @@ const mensajeElemento = document.querySelector('.mensaje-dinamico');
 
 // Mensajes dinamicos que mostraremos en el inicio de nuestra pagina
 const mensajes = [
-    'Busca los mejores juegos en nuestra pagina.',
-    'Diseñada para encontrar juegos entre categorias.',
-    'Encuentra el juego que mas te guste.',
+    'Encuentra los mejores juegos y comunidad con nosotros',
+    'Pensada por gamers para gamers.',
+    'Encuentra el juego que mas te guste entre diferentes categorías.',
 ];
 
 // Establecemos el tiempo que pasará entre cada letra (en milisegundos)
