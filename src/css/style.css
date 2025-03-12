@@ -204,7 +204,7 @@ html, body {
     color: white;
     padding: 15px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
     flex: 1;
 }
 
@@ -291,7 +291,7 @@ html, body {
 
 .category-button {
     display: inline-block;
-    background: #ff9900;
+    background: linear-gradient(to right bottom, rgb(255, 217, 0), chocolate);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -300,5 +300,139 @@ html, body {
 }
 
 .category-button:hover {
-    background: #e08800;
+    background: linear-gradient(to right bottom, rgb(172, 146, 0), rgb(164, 82, 24));
+}
+
+.contenedor {
+    text-align: center;
+}
+
+/* Encabezado de las categorias de juegos */
+.categorys-estilo {
+    position: relative;
+    padding: 200px;
+    text-align: center;
+    margin-top: 50px; /* Ajusta según la altura del navbar */
+    overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
+}
+
+/* Imagen de fondo */
+.categorys-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: blur(5px);   /* Aplica un efecto de desenfoque */
+}
+
+.category-general-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-top: -150px; /* Ajusta este valor para subir o bajar los textos */
+}
+
+.category-general-text h1,
+.category-general-text h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin: 5px 0;
+    color: #fff;
+}
+
+.category-general-text h1 {
+    margin: 5px 0;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+.category-general-text h2 {
+    margin: 5px 0;
+    color: rgb(255, 255, 255);
+    font-weight: 450;
+    font-size: 130%;
+}
+
+/* Contenido de las cajas de categorías */
+.categories-game-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tarjetas de los juegos, descripcion y sus precios */
+.categories-game-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
+    gap: 20px; /* Espacio horizontal/vertical entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    margin-top: 20px; /* Espacio superior entre el título y las tarjetas */
+}
+  
+/* Tarjeta individual */
+.category-game-box {
+    position: relative;
+    width: 300px;
+    background: rgb(15, 23, 42);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Borde con gradiente usando border-image */
+    border: 4px solid transparent;
+    border-image: linear-gradient(to right bottom, gold, chocolate) 1;
+}
+  
+/* Imagen del juego */
+.game-card-image {
+    width: 300px;      /* Ancho fijo */
+    height: 180px;     /* Alto fijo */
+    object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 10px;
+}
+  
+/* Título del juego */
+.category-game-box h2 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+  
+/* Descripción */
+.category-game-box p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+  
+/* Precio (opcional) */
+.game-card-price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.category-game-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.category-game-box p {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+/* Contenido principal */
+.category-name-body-content {
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: -10px;
+    flex: 1;
 }
