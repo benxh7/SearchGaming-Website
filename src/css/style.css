@@ -1,0 +1,144 @@
+/* Estilos generales */
+html, body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgb(7, 11, 20);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total de los elementos */
+    position: relative;
+}
+
+/* Navegación */
+#navbar {
+    background: rgb(5, 7, 14); /* Fondo oscuro translúcido */
+    padding: 15px 0;
+    position: fixed; /* Fijar la barra en la parte superior */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Navegación */
+#navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centrar opciones */
+    align-items: center;
+}
+
+/* Elementos */
+#navbar ul li {
+    margin: 0 20px;
+}
+
+/* Enlaces */
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    border-radius: 8px; /* Bordes suaves */
+    transition: 0.3s ease-in-out;
+    position: relative; /* Para animaciones antes del enlace */
+}
+
+/* Efecto hover */
+#navbar ul li a:hover {
+    background: rgb(15 23 42); /* Color destacado */
+    color: #fff;
+}
+
+#navbar ul li.menu a::before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #ffffff; /* Color de la animación de la barra */
+    transition: 0.5s transform ease;
+    transform: scale3d(0,1,1);
+    transform-origin: 50% 50%;
+}
+
+/* Cuando el enlace con .menu-3 es hover */
+#navbar ul li.menu a:hover::before {
+    transform: scale3d(1,1,1);
+}
+
+/* Estilos del encabezado */
+#header-estilo {
+    background-image: url("/src/assets/images/keyboard.jpg");
+    padding: 100px;
+    text-align: center;
+    margin-top: 50px; /* Valor para poder ajustar la altura de la navbar */
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-position: center; /* Centra la imagen en el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/* Contenido del encabezado */
+#header-estilo h1 {
+    margin: 5px 0;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+#header-estilo h2 {
+    margin: 5px 0;
+    color: rgb(255, 255, 255);
+    font-weight: 450;
+    font-size: 130%;
+}
+
+/* Estilos de título */
+#titulo-principal {
+    color: #ff9900;
+    font-size: 500%;
+}
+
+/* Contenido principal */
+#body {
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 50px;
+    flex: 1;
+}
+
+#body h1 {
+    font-size: 1.3em;
+    margin: 20px 0;
+}
+
+#body h2 {
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgb(5, 7, 14);
+    color: white;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animación de parpadeo del cursor */
+@keyframes parpadeo {
+    50% {
+        opacity: 0;
+    }
+}
