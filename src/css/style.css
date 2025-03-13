@@ -84,7 +84,7 @@ html, body {
     left: -290px;  /* Inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
-    background: linear-gradient(to right bottom, rgba(219, 4, 173, 0.548), rgba(102, 2, 105, 0.377));
+    background: linear-gradient(to right bottom, rgba(219, 4, 173, 0.548), rgba(186, 4, 192, 0.486));
     padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
     flex-direction: column;
@@ -118,7 +118,7 @@ html, body {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #180472;
+    background: #ebafe8;
     transition: transform 0.5s ease;
     transform: scale3d(0, 1, 1);
     transform-origin: 50% 50%;
@@ -167,7 +167,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(6, 2, 71, 0.5); /* 50% opacidad */
+    background: rgba(80, 2, 87, 0.5); /* 50% opacidad */
     z-index: 0;
 }
 
