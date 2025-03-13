@@ -100,7 +100,7 @@ html, body {
 
 /* Estilos para los enlaces dentro del menú */
 .navbar ul li a {
-    color: rgb(13, 3, 71);
+    color: rgb(255, 255, 255);
     padding: 13px 30px;
     width: 60%;
     margin: 0 auto; /* Centra el elemento */
