@@ -183,7 +183,7 @@ html, body {
 .header-estilo h1 {
     margin: 5px 0;
     color: rgb(243, 1, 162);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .header-estilo h2 {
@@ -291,7 +291,7 @@ html, body {
 
 .category-button {
     display: inline-block;
-    background: linear-gradient(to right bottom, rgb(255, 217, 0), chocolate);
+    background: linear-gradient(to right bottom, rgb(125, 21, 173), rgb(198, 73, 209));
     color: white;
     padding: 10px 20px;
     text-decoration: none;
