@@ -448,7 +448,7 @@ html, body {
 /* Estilo futurista con efecto neón */
 .boton-volver {
     position: fixed;
-    bottom: 20px;
+    bottom: 45px;
     right: 20px;
     padding: 12px 25px;
     font-size: 18px;
