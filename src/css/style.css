@@ -167,16 +167,17 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(80, 2, 87, 0.5); /* 50% opacidad */
+    background: rgba(108, 2, 117, 0.7); /* 70% opacidad */
     z-index: 0;
 }
 
 /* Aseguramos que el contenido (texto) se muestre por encima del overlay */
 .header-estilo h1,
 .header-estilo h2 {
+    
     position: relative;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.856);
 }
 
 /* Contenido del encabezado pagina inicio */
