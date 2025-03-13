@@ -179,7 +179,7 @@ html, body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Contenido del encabezado */
+/* Contenido del encabezado pagina inicio */
 .header-estilo h1 {
     margin: 5px 0;
     color: rgb(243, 1, 162);
@@ -247,7 +247,7 @@ html, body {
 .category-text h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 5px 0;
-    color: #fff;
+    color: #f500fd;
 }
 
 .category-text h1 {
@@ -430,9 +430,11 @@ html, body {
 
 /* Contenido principal */
 .category-name-body-content {
-    color: white;
+    color: rgb(255, 0, 234);
     padding: 15px;
     text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
     margin-top: -10px;
     flex: 1;
 }
