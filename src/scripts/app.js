@@ -1,53 +1,65 @@
-// Seleccionamos el elemento donde se mostrará el mensaje
-const mensajeElemento = document.querySelector('.mensaje-dinamico');
+const mensajeDinamico = document.querySelector('.mensaje-dinamico');
 
-// Mensajes dinamicos que mostraremos en el inicio de nuestra pagina
+// Mensajes dinámicos que mostraremos en el inicio de la pagina
 const mensajes = [
     'Encuentra los mejores juegos y comunidad con nosotros.',
     'Pensada por gamers para gamers.',
     'Encuentra el juego que más te guste entre nuestras diferentes categorías.',
 ];
 
-// Establecemos el tiempo que pasará entre cada letra (en milisegundos)
-const tiempoEntreLetras = 100; // 100 equivalen a 0.1 segundos
-const tiempoEntreMensajes = 5000; // 5000 equivalen a 5 segundos
-
-// Creamos un cursor que parpadea para simular el efecto de escritura
-const cursor = document.createElement('span');
-cursor.textContent = '|';
-cursor.style.animation = 'parpadeo 0.8s infinite step-start'; // Añadimos un parpadeo al cursor
-mensajeElemento.appendChild(cursor);
+// Tiempo entre cada letra (en milisegundos) para escribir y borrar
+const tiempoEntreLetras = 100; // 0.1 segundos por letra al escribir
+const tiempoEntreBorrado = 30; // Tiempo especial para el borrado del mensaje
+const tiempoEntreMensajes = 5000; // 5 segundos de pausa al terminar de escribir
 
 /* 
-Esta funcion se encargara de escribir el mensaje letra por letra
-para darle un toque de escritura a los mensajes. 
+Creamos un cursor que parpadea para simular
+el efecto de escritura de un mensaje 
 */
+const cursor = document.createElement('span');
+cursor.textContent = '|';
+cursor.style.animation = 'parpadeo 0.8s infinite step-start';
+mensajeDinamico.appendChild(cursor);
+
+
+// Función para escribir el mensaje letra por letra
 function escribirMensaje(mensaje, indiceMensaje) {
     let i = 0;
-    mensajeElemento.textContent = ''; // Limpiamos el contenido del texto para enviar el otro mensaje
-    mensajeElemento.appendChild(cursor); // Nos aseguramos de agregar el cursor
+    mensajeDinamico.appendChild(cursor); // Agregamos el cursor
 
-    /*
-    Esta función se encarga de escribir el mensaje letra por letra
-    y llamar a la función de nuevo después de un determinado tiempo.
-    */
-    const escribir = () => {
+    function escribir() {
         if (i < mensaje.length) {
-            mensajeElemento.textContent = mensaje.substring(0, i + 1); // Escribe las letras hasta el índice actual
-            mensajeElemento.appendChild(cursor); // Vuelve a agregar el cursor en cada paso
+            mensajeDinamico.textContent = mensaje.substring(0, i + 1);
+            mensajeDinamico.appendChild(cursor);
             i++;
-            setTimeout(escribir, tiempoEntreLetras); // Espera antes de escribir la siguiente letra
+            setTimeout(escribir, tiempoEntreLetras);
         } else {
-            // Esperamos un tiempo antes de mostrar el siguiente mensaje
+            // Cuando se completa el mensaje espera y comienza a borrar letra por letra
             setTimeout(() => {
-                indiceMensaje = (indiceMensaje + 1) % mensajes.length; // Ciclo de mensajes
-                escribirMensaje(mensajes[indiceMensaje], indiceMensaje); // Escribe el siguiente mensaje
+                borrarMensaje(mensaje, indiceMensaje);
             }, tiempoEntreMensajes);
         }
-    };
-
-    escribir(); // Inicia el efecto de escritura
+    }
+    escribir();
 }
 
-// Llamamos a la función para comenzar a escribir el primer mensaje
+// Función para borrar el mensaje letra por letra con un tiempo especial
+function borrarMensaje(mensaje, indiceMensaje) {
+    let i = mensaje.length;
+    function borrar() {
+        if (i > 0) {
+            mensajeDinamico.textContent = mensaje.substring(0, i - 1);
+            mensajeDinamico.appendChild(cursor);
+            i--;
+            setTimeout(borrar, tiempoEntreBorrado);
+        } else {
+            // Cuando se borra todo se escribe el siguiente mensaje
+            indiceMensaje = (indiceMensaje + 1) % mensajes.length;
+            escribirMensaje(mensajes[indiceMensaje], indiceMensaje);
+        }
+    }
+    borrar();
+}
+
+// Inicia la animacion escribiendo el primer mensaje
 escribirMensaje(mensajes[0], 0);
