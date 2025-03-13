@@ -72,7 +72,7 @@ html, body {
     left: 0;
     width: 100%;
     z-index: 100;
-    background: rgb(5, 7, 14);
+    background: rgb(5, 9, 20);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 25px 0;
 }
@@ -100,9 +100,9 @@ html, body {
 
 /* Estilos para los enlaces dentro del menú */
 .navbar ul li a {
-    color: white;
+    color: rgb(13, 3, 71);
     padding: 13px 30px;
-    width: 50%;
+    width: 60%;
     margin: 0 auto; /* Centra el elemento */
     text-decoration: none;
     display: block;
@@ -118,7 +118,7 @@ html, body {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #ffffff;
+    background: #180472;
     transition: transform 0.5s ease;
     transform: scale3d(0, 1, 1);
     transform-origin: 50% 50%;
@@ -167,7 +167,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 50% opacidad */
+    background: rgba(6, 2, 71, 0.5); /* 50% opacidad */
     z-index: 0;
 }
 
