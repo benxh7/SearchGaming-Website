@@ -248,16 +248,17 @@ html, body {
 .category-text h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 5px 0;
-    color: #f500fd;
 }
 
 .category-text h1 {
     font-weight: 500;
+    color: #f500fd;
 }
 
 .category-text h2 {
     font-weight: 450;
     font-size: 130%;
+    color: #ffffff;
 }
 
 /* Contenido de las cajas de categorías */
@@ -278,6 +279,11 @@ html, body {
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease; /* Transición para suavizar el efecto */
+}
+
+.category-box:hover {
+    transform: scale(1.05); /* Agranda la caja al 105% de su tamaño original */
 }
 
 .category-box h2 {
@@ -387,6 +393,11 @@ html, body {
     /* Borde con gradiente usando border-image */
     border: 4px solid transparent;
     border-image: linear-gradient(to right bottom, rgb(211, 63, 224), rgb(100, 192, 235)) 1;
+    transition: transform 0.3s ease; /* Transición para suavizar el efecto */
+}
+
+.category-game-box:hover {
+    transform: scale(1.05); /* Agranda la caja al 105% de su tamaño original */
 }
   
 /* Imagen del juego */
