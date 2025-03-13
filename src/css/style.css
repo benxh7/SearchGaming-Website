@@ -416,6 +416,12 @@ html, body {
     font-size: 1rem;
     font-weight: bold;
     margin-top: 10px;
+    color: white;
+    text-decoration: none;
+}
+  
+.game-card-price:hover {
+    text-decoration: underline;
 }
 
 .category-game-box h2 {
