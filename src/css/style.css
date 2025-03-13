@@ -445,21 +445,37 @@ html, body {
     flex: 1;
 }
 
-/* Estilo para el botón flotante "Volver" */
+/* Estilo futurista con efecto neón */
 .boton-volver {
     position: fixed;
-    bottom: 20px;   /* Distancia desde el borde inferior */
-    right: 20px;    /* Distancia desde el borde derecho */
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
     color: #fff;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    z-index: 1000;  /* Para que el botón se muestre por encima de otros elementos */
-  }
-  
-  .boton-volver:hover {
-    background-color: #0056b3;
-  }
+    box-shadow: 0 0 10px #00ffff, 0 0 40px #ff00ff;
+    transition: all 0.3s ease-in-out;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Efecto cuando el usuario pasa el mouse */
+.boton-volver:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff, 0 0 60px #00ffff;
+}
+
+/* Animación de brillo dinámico */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #00ffff, 0 0 40px #ff00ff;
+    }
+    100% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 60px #00ffff;
+    }
+}
