@@ -183,13 +183,13 @@ html, body {
 /* Contenido del encabezado pagina inicio */
 .header-estilo h1 {
     margin: 5px 0;
-    color: rgb(243, 1, 162);
+    color: rgba(206, 0, 206, 0.753);
     font-weight: 700;
 }
 
 .header-estilo h2 {
     margin: 5px 0;
-    color: rgb(255, 255, 255);
+    color: rgb(71, 217, 243);
     font-weight: 450;
     font-size: 130%;
 }
