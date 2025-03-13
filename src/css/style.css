@@ -36,7 +36,7 @@ html, body {
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    background: #f89c2b;  /* Color original de las barras */
+    background: #ac03d6;  /* Color original de las barras */
     border-radius: 3px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
                 opacity 0.55s ease,
@@ -84,7 +84,7 @@ html, body {
     left: -290px;  /* Inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
-    background: linear-gradient(to right bottom, gold, chocolate);
+    background: linear-gradient(to right bottom, rgba(235, 83, 202, 0.7), rgba(141, 6, 231, 0.7));
     padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@ html, body {
 
 /* Estilos para los enlaces dentro del menú */
 .navbar ul li a {
-    color: rgb(13, 3, 71);
+    color: rgb(255, 255, 255);
     padding: 13px 30px;
     width: 60%;
     margin: 0 auto; /* Centra el elemento */
@@ -118,7 +118,7 @@ html, body {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #180472;
+    background: #ebafe8;
     transition: transform 0.5s ease;
     transform: scale3d(0, 1, 1);
     transform-origin: 50% 50%;
@@ -136,7 +136,7 @@ html, body {
 
 /* Efecto hover para el fondo del enlace */
 .navbar ul li a:hover {
-    background: #b66d00;
+    background: #c92ca7;
 }
 
 /* Encabezado */
@@ -167,35 +167,36 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(6, 2, 71, 0.5); /* 50% opacidad */
+    background: rgba(108, 2, 117, 0.7); /* 70% opacidad */
     z-index: 0;
 }
 
 /* Aseguramos que el contenido (texto) se muestre por encima del overlay */
 .header-estilo h1,
 .header-estilo h2 {
+    
     position: relative;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(184, 226, 250, 0.856);
 }
 
 /* Contenido del encabezado pagina inicio */
 .header-estilo h1 {
     margin: 5px 0;
-    color: rgb(243, 1, 162);
+    color: rgba(255, 23, 255, 0.753);
     font-weight: 700;
 }
 
 .header-estilo h2 {
     margin: 5px 0;
-    color: rgb(255, 255, 255);
+    color: rgb(17, 161, 245);
     font-weight: 450;
     font-size: 130%;
 }
 
 /* Estilos de título */
 .titulo-principal {
-    color: #ff9900;
+    color: #7703946e;
     font-size: 500%;
 }
 
@@ -247,16 +248,17 @@ html, body {
 .category-text h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 5px 0;
-    color: #f500fd;
 }
 
 .category-text h1 {
     font-weight: 500;
+    color: #f500fd;
 }
 
 .category-text h2 {
     font-weight: 450;
     font-size: 130%;
+    color: #ffffff;
 }
 
 /* Contenido de las cajas de categorías */
@@ -277,6 +279,11 @@ html, body {
     width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease; /* Transición para suavizar el efecto */
+}
+
+.category-box:hover {
+    transform: scale(1.05); /* Agranda la caja al 105% de su tamaño original */
 }
 
 .category-box h2 {
@@ -300,7 +307,7 @@ html, body {
 }
 
 .category-button:hover {
-    background: linear-gradient(to right bottom, rgb(172, 146, 0), rgb(164, 82, 24));
+    background: linear-gradient(to right bottom, rgb(129, 63, 118), rgb(221, 130, 198));
 }
 
 .contenedor {
@@ -385,7 +392,12 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* Borde con gradiente usando border-image */
     border: 4px solid transparent;
-    border-image: linear-gradient(to right bottom, gold, chocolate) 1;
+    border-image: linear-gradient(to right bottom, rgb(211, 63, 224), rgb(100, 192, 235)) 1;
+    transition: transform 0.3s ease; /* Transición para suavizar el efecto */
+}
+
+.category-game-box:hover {
+    transform: scale(1.05); /* Agranda la caja al 105% de su tamaño original */
 }
   
 /* Imagen del juego */
