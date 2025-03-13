@@ -179,11 +179,11 @@ html, body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Contenido del encabezado */
+/* Contenido del encabezado pagina inicio */
 .header-estilo h1 {
     margin: 5px 0;
     color: rgb(243, 1, 162);
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .header-estilo h2 {
@@ -247,7 +247,7 @@ html, body {
 .category-text h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     margin: 5px 0;
-    color: #fff;
+    color: #f500fd;
 }
 
 .category-text h1 {
@@ -291,7 +291,7 @@ html, body {
 
 .category-button {
     display: inline-block;
-    background: linear-gradient(to right bottom, rgb(255, 217, 0), chocolate);
+    background: linear-gradient(to right bottom, rgb(125, 21, 173), rgb(198, 73, 209));
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -436,9 +436,46 @@ html, body {
 
 /* Contenido principal */
 .category-name-body-content {
-    color: white;
+    color: rgb(255, 0, 234);
     padding: 15px;
     text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
     margin-top: -10px;
     flex: 1;
+}
+
+/* Estilo futurista con efecto neón */
+.boton-volver {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(45deg, #ff00ff, #00ffff);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00ffff, 0 0 40px #ff00ff;
+    transition: all 0.3s ease-in-out;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Efecto cuando el usuario pasa el mouse */
+.boton-volver:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff00ff, 0 0 60px #00ffff;
+}
+
+/* Animación de brillo dinámico */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #00ffff, 0 0 40px #ff00ff;
+    }
+    100% {
+        box-shadow: 0 0 20px #ff00ff, 0 0 60px #00ffff;
+    }
 }
