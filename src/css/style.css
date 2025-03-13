@@ -36,7 +36,7 @@ html, body {
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
-    background: #f89c2b;  /* Color original de las barras */
+    background: #ac03d6;  /* Color original de las barras */
     border-radius: 3px;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
                 opacity 0.55s ease,
@@ -84,7 +84,7 @@ html, body {
     left: -290px;  /* Inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
-    background: linear-gradient(to right bottom, gold, chocolate);
+    background: linear-gradient(to right bottom, rgba(219, 4, 173, 0.548), rgba(102, 2, 105, 0.377));
     padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
     flex-direction: column;
@@ -136,7 +136,7 @@ html, body {
 
 /* Efecto hover para el fondo del enlace */
 .navbar ul li a:hover {
-    background: #b66d00;
+    background: #c92ca7;
 }
 
 /* Encabezado */
@@ -195,7 +195,7 @@ html, body {
 
 /* Estilos de título */
 .titulo-principal {
-    color: #ff9900;
+    color: #7703946e;
     font-size: 500%;
 }
 
@@ -300,7 +300,7 @@ html, body {
 }
 
 .category-button:hover {
-    background: linear-gradient(to right bottom, rgb(172, 146, 0), rgb(164, 82, 24));
+    background: linear-gradient(to right bottom, rgb(129, 63, 118), rgb(221, 130, 198));
 }
 
 .contenedor {
