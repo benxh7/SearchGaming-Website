@@ -84,7 +84,7 @@ html, body {
     left: -290px;  /* Inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
-    background: linear-gradient(to right bottom, rgba(235, 83, 202, 0.548), rgba(31, 176, 202, 0.486));
+    background: linear-gradient(to right bottom, rgba(235, 83, 202, 0.7), rgba(31, 176, 202, 0.7));
     padding-top: 50px;  /* Espacio para el icono de menú */
     display: flex;
     flex-direction: column;
