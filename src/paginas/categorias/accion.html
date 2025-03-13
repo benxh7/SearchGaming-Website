@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Gaming | Categoria Terror</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="stylesheet" href="/src/css/style.css">
+</head>
+
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <!-- Checkbox oculto que controla el estado del menú -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <!-- Label que funciona como botón de menú (hamburguesa) con animación -->
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <!-- Menú de navegación -->
+        <ul class="nav-list">
+            <li class="menu"><a href="/src/index.html">Inicio</a></li>
+            <li class="menu"><a href="/src/paginas/categorias.html">Categorias</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="categorys-estilo">
+        <img src="/src/assets/images/juegos-accion.webp" alt="Imagen de Juegos Terror" class="categorys-header-img">
+        <div class="category-general-text">
+            <h1>Acción</h1>
+            <h2>
+                Sumérgete en el corazón de la batalla con nuestra selección de juegos de acción.<br>
+                Enfrenta combates intensos, desafía a poderosos enemigos y vive<br>
+                la emoción de la adrenalina pura en cada misión.<br><br>
+                Desde épicos enfrentamientos cuerpo a cuerpo hasta espectaculares<br>
+                tiroteos y explosiones, estos títulos te mantendrán siempre en movimiento.<br>
+                Pon a prueba tus reflejos, domina cada arma y demuestra tu habilidad<br>
+                en escenarios llenos de peligro y emoción.<br><br>
+                ¿Estás listo para la acción?
+            </h2>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <div class="category-name-body-content">
+        <h1>Juegos</h1>
+        <div class="categories-game-container">
+            <!-- Tarjeta 1 -->
+            <div class="category-game-box">
+                <!-- Imagen del juego -->
+                <img src="/src/assets/gamecards/halo.jpg" alt="Imagen de Halo" class="game-card-image" />
+                <!-- Título del juego -->
+                <h2>Halo</h2>
+                <!-- Descripción -->
+                <p>
+                    Halo es una franquicia de videojuegos de ciencia ficción creada y desarrollada por Bungie Studios hasta Halo: Reach, 
+                    y gestionada ahora por 343 Industries, propiedad de Xbox Game Studios. La serie se centra en una guerra interestelar 
+                    entre la humanidad y una alianza teocrática de alienígenas conocidos como Covenant.
+                </p>
+                <!-- Precio (opcional, si lo deseas) -->
+                <p class="game-card-price">$15.000</p>
+            </div>
+            <!-- Tarjeta 2 -->
+            <div class="category-game-box">
+                <img src="/src/assets/gamecards/marvel spiderman 2.jpg" alt="Imagen de Marvel Spider-Man" class="game-card-image" />
+                <h2>Marvel Spider-Man</h2>
+                <p>
+                    Marvel's Spider-Man 2 es un videojuego de acción y aventura de mundo abierto desarrollado por Insomniac Games
+                    y publicado por Sony Interactive Entertainment. Basado en el personaje de Marvel Comics​
+                </p>
+                <p class="game-card-price">$49.990</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p> Copyright © Grupo 1 - 2025. Todos los derechos reservados. </p>
+    </footer>
+
+    <!-- Enlazar el script al final para evitar problemas de carga -->
+    <script src="/src/scripts/app.js"></script>
+</body>
+
+</html>
