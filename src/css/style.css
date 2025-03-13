@@ -444,3 +444,22 @@ html, body {
     margin-top: -10px;
     flex: 1;
 }
+
+/* Estilo para el botón flotante "Volver" */
+.boton-volver {
+    position: fixed;
+    bottom: 20px;   /* Distancia desde el borde inferior */
+    right: 20px;    /* Distancia desde el borde derecho */
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;  /* Para que el botón se muestre por encima de otros elementos */
+  }
+  
+  .boton-volver:hover {
+    background-color: #0056b3;
+  }
