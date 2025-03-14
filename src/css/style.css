@@ -3,7 +3,7 @@
    ----------------------------- */
 html, body {
     font-family: "Roboto", sans-serif;
-    background-color: rgb(7, 11, 20);
+    background-color: rgb(51, 51, 51);
     margin: 0;
     padding: 0;
     text-align: center;
@@ -191,7 +191,7 @@ html, body {
     
     position: relative;
     z-index: 1;
-    text-shadow: 2px 2px 4px rgba(184, 226, 250, 0.856);
+    text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
 }
 
 /* Contenido del encabezado pagina inicio */
@@ -215,7 +215,7 @@ html, body {
 }
 
 /* --------------------------------
-    Diseño del vuerpo de la pagina
+    Diseño del cuerpo de la pagina
    -------------------------------- */
 
 /* Contenido principal */
@@ -243,7 +243,7 @@ html, body {
 
 /* Pie de página */
 .footer {
-    background-color: rgb(5, 7, 14);
+    background-color: rgb(51, 51, 51);
     color: white;
     padding: 10px;
     position: relative;
@@ -298,14 +298,19 @@ html, body {
 
 /* Caja de categoría */
 .category-box {
-    background: rgb(15, 23, 42);
     color: white;
     border-radius: 8px;
     padding: 20px;
     width: 300px;
+    height: 200px; /* Define una altura para que se vea la imagen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease; /* Transición para suavizar el efecto */
+    position: relative;
+    overflow: hidden;
+    background: rgb(15, 23, 42); /* Color de fondo por defecto en caso de que no haya imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Asegura que la imagen esté centrada */
 }
 
 .category-box:hover {
