@@ -1,4 +1,6 @@
-/* ----- ESTILO GENERAL DE LA PAGINA ----- */
+/* -----------------------------
+    Diseño General de la pagina
+   ----------------------------- */
 html, body {
     font-family: "Roboto", sans-serif;
     background-color: rgb(7, 11, 20);
@@ -11,7 +13,12 @@ html, body {
     flex-direction: column;
     box-sizing: border-box; /* Incluye padding y border en el tamaño total */
     position: relative;
+    scroll-behavior: smooth; /* Hace que el desplazamiento sea muy suave */
 }
+
+/* -------------------------------
+    Diseño del menu de navegación
+   ------------------------------- */
 
 /* Navegación */
 .menu-toggle {
@@ -65,6 +72,7 @@ html, body {
     transform: rotate(-45deg) translate(-2px, -0.5px);
     background: #232323;
 }
+
 /* Estilo del navbar */
 .navbar {
     position: fixed;
@@ -98,16 +106,18 @@ html, body {
     left: 0;
 }
 
-/* Estilos para los enlaces dentro del menú */
+/* Estilos para los enlaces dentro del menú (se usan para todas las opciones) */
 .navbar ul li a {
     color: rgb(255, 255, 255);
-    padding: 13px 30px;
-    width: 60%;
-    margin: 0 auto; /* Centra el elemento */
+    padding: 10px 30px;
+    width: 50%;
+    margin: 5px auto; /* Centra el elemento */
     text-decoration: none;
     display: block;
     transition: background 0.3s ease;
     position: relative; /* Para el pseudo-elemento */
+    border: 1px solid #fff;  /* Borde blanco */
+    border-radius: 7px;
 }
 
 /* Pseudo-elemento para la línea blanca debajo */
@@ -138,6 +148,10 @@ html, body {
 .navbar ul li a:hover {
     background: #c92ca7;
 }
+
+/* --------------------------------------
+    Diseño del encabezado de cada pagina
+   -------------------------------------- */
 
 /* Encabezado */
 .header-estilo {
@@ -200,6 +214,10 @@ html, body {
     font-size: 500%;
 }
 
+/* --------------------------------
+    Diseño del vuerpo de la pagina
+   -------------------------------- */
+
 /* Contenido principal */
 .body-content {
     color: white;
@@ -219,6 +237,10 @@ html, body {
     margin: 20px 0;
 }
 
+/* --------------------------------
+    Diseño del footer de la pagina
+   -------------------------------- */
+
 /* Pie de página */
 .footer {
     background-color: rgb(5, 7, 14);
@@ -235,6 +257,10 @@ html, body {
         opacity: 0;
     }
 }
+
+/* -----------------------------------
+   Diseño de las Categorías de Juegos
+   ----------------------------------- */
 
 /* Opcional: Contenedor de textos para encabezados específicos (como en la página de Categorías) */
 .category-text {
@@ -361,6 +387,10 @@ html, body {
     font-weight: 450;
     font-size: 130%;
 }
+
+/* ------------------------------------
+    Categorias - Game Cards (Tarjetas)
+   ------------------------------------ */
 
 /* Contenido de las cajas de categorías */
 .categories-game-container {
@@ -490,4 +520,88 @@ html, body {
     100% {
         box-shadow: 0 0 20px #ff00ff, 0 0 60px #00ffff;
     }
+}
+
+/* -----------------------------------
+   Estilos para Iniciar Sesión (Modal)
+   ----------------------------------- */
+
+/* Modal para Iniciar Sesión (overlay) */
+.login-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    backdrop-filter: blur(5px);   /* Efecto de desenfoque en el fondo */
+    z-index: 150;
+}
+
+/* Contenedor del formulario de Iniciar Sesión */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    z-index: 200;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Estilos para el contenido del formulario */
+.login-container h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* Estilos para las etiquetas de los campos de texto */
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Estilos para los campos de texto */
+.login-container input {
+    width: 94%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Botón de Iniciar Sesión */
+.login-container button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ac03d6;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* backgroun al pasar el mouse por el boton Entrar */
+.login-container button:hover {
+    background: #9402b9;
+}
+/* Botón para cerrar el modal */
+.login-container .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
 }

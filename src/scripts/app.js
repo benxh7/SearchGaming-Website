@@ -63,3 +63,29 @@ function borrarMensaje(mensaje, indiceMensaje) {
 
 // Inicia la animacion escribiendo el primer mensaje
 escribirMensaje(mensajes[0], 0);
+
+
+
+
+// Seleccionar elementos
+const loginBtn = document.getElementById('loginBtn');
+const loginModal = document.getElementById('loginModal');
+const closeLogin = document.getElementById('closeLogin');
+
+// Al hacer click en "Iniciar Sesión", mostrar el modal
+loginBtn.addEventListener('click', function(e) {
+  e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+  loginModal.style.display = 'block';
+});
+
+// Al hacer click en el botón de cerrar, ocultar el modal
+closeLogin.addEventListener('click', function() {
+  loginModal.style.display = 'none';
+});
+
+// Cerrar el modal si se hace click fuera del contenedor
+window.addEventListener('click', function(e) {
+  if (e.target === loginModal) {
+    loginModal.style.display = 'none';
+  }
+});
