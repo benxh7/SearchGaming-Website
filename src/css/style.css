@@ -9,10 +9,10 @@ html, body {
     padding: 0;
     text-align: center;
     min-height: 100vh;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    overflow-x: hidden; /* Evita el que la pagina no aumente su tamaño horizontalmente */
     display: flex;
     flex-direction: column;
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    box-sizing: border-box; /* Incluye el padding y el border */
     position: relative;
     scroll-behavior: smooth; /* Hace que el desplazamiento sea muy suave */
 }
@@ -26,16 +26,16 @@ html, body {
     display: none;
 }
 
-/* Estilo del icono de menú hamburguesa con animacion */
+/* Estilo del icono del menu en la esquina izquierda */
 .menu-icon {
     display: block;
     position: fixed;
     top: 13px;
-    left: 13px; /* Cambia a 'right: 15px;' si prefieres la esquina superior derecha */
+    left: 13px; /* Poscicion del icono hacia la izquierda */
     width: 33px;    /* Ancho para acomodar las 3 barras */
     height: 24px;   /* Alto para acomodar las barras con espacio */
     cursor: pointer;
-    z-index: 200;   /* Por encima del menú */
+    z-index: 200;   /* Nos aseguramos que este por encima del menu */
 }
 
 /* Las 3 barras dentro del icono */
@@ -52,7 +52,7 @@ html, body {
     transform-origin: 4px 0px;
 }
 
-/* Ajusta el origen de transformación de la primera y la tercera barra */
+/* Esto ajusta el origen de la primera y la tercera barra */
 .menu-icon span:first-child {
     transform-origin: 0% 0%;
 }
@@ -60,7 +60,7 @@ html, body {
     transform-origin: 0% 100%;
 }
 
-/* Transformaciones al marcar el checkbox */
+/* Convierte las barras en una X al darle click */
 .menu-toggle:checked + .menu-icon span:first-child {
     transform: rotate(45deg) translate(-3px, -1px);
     background: #232323;
@@ -86,15 +86,15 @@ html, body {
     padding: 25px 0;
 }
 
-/* Estilo del menú (la lista) */
+/* Estilo de la lista del menu */
 .navbar ul {
     position: fixed;
     top: 0;
-    left: -290px;  /* Inicia fuera de la pantalla */
+    left: -290px;  /* Primero inicia fuera de la pantalla */
     width: 200px;
     height: 100%;
     background: linear-gradient(to right bottom, rgba(235, 83, 202, 0.7), rgba(141, 6, 231, 0.7));
-    padding-top: 50px;  /* Espacio para el icono de menú */
+    padding-top: 50px;  /* Espacio para cada icono del menu */
     display: flex;
     flex-direction: column;
     transition: left 0.3s ease;
@@ -102,12 +102,12 @@ html, body {
     list-style: none;
 }
 
-/* Cuando el checkbox está marcado, desplaza el menú a la vista */
+/* Cuando el checkbox esta marcado desplaza el menu a la vista dandole un efecto como de desplazamiento */
 .menu-toggle:checked ~ ul {
     left: 0;
 }
 
-/* Estilos para los enlaces dentro del menú (se usan para todas las opciones) */
+/* Estilos para los subvinculos dentro del menu (se aplican a todas las opciones) */
 .navbar ul li a {
     color: rgb(255, 255, 255);
     padding: 10px 30px;
@@ -116,12 +116,12 @@ html, body {
     text-decoration: none;
     display: block;
     transition: background 0.3s ease;
-    position: relative; /* Para el pseudo-elemento */
-    border: 1px solid #fff;  /* Borde blanco */
+    position: relative;
+    border: 1px solid #fff;  /* Borde blanco para cada opcion */
     border-radius: 7px;
 }
 
-/* Pseudo-elemento para la línea blanca debajo */
+/* Animacion al pasar el mouse por una categoria con subvinculo dentro del menu */
 .navbar ul li a::before {
     content: "";
     width: 100%;
@@ -135,12 +135,12 @@ html, body {
     transform-origin: 50% 50%;
 }
 
-/* Efecto hover: al pasar el cursor, aparece la línea */
+/* Animacion al pasar el mouse aparece la línea */
 .navbar ul li a:hover::before {
     transform: scale3d(1, 1, 1);
 }
 
-/* Efecto para la opción activa: si el enlace tiene la clase "active", la línea se muestra */
+/* Efecto para la opcion activada si el enlace tiene la clase "active" la linea se muestra */
 .navbar ul li a.active::before {
     transform: scale3d(1, 1, 1);
 }
@@ -154,12 +154,12 @@ html, body {
     Diseño del encabezado de cada pagina
    -------------------------------------- */
 
-/* Encabezado */
+/* Estilo del encabezado */
 .header-estilo {
     position: relative;
     padding: 100px;
     text-align: center;
-    margin-top: 50px; /* Ajusta según la altura del navbar */
+    margin-top: 50px; /* Se ajusta segun la altura de la navbar */
     overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
 }
 
@@ -182,20 +182,19 @@ html, body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(108, 2, 117, 0.7); /* 70% opacidad */
+    background: rgba(108, 2, 117, 0.7); /* Color con un 70% opacidad */
     z-index: 0;
 }
 
-/* Aseguramos que el contenido (texto) se muestre por encima del overlay */
+/* Aseguramos que el texto o contenido se muestre por encima del overlay */
 .header-estilo h1,
 .header-estilo h2 {
-    
     position: relative;
     z-index: 1;
     text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
 }
 
-/* Contenido del encabezado pagina inicio */
+/* Contenido del encabezado de la pagina inicial */
 .header-estilo h1 {
     margin: 5px 0;
     color: rgba(255, 23, 255, 0.753);
@@ -209,7 +208,7 @@ html, body {
     font-size: 130%;
 }
 
-/* Estilos de título */
+/* Estilos para el titulo */
 .titulo-principal {
     color: #7703946e;
     font-size: 500%;
@@ -219,7 +218,7 @@ html, body {
     Diseño del cuerpo de la pagina
    -------------------------------- */
 
-/* Contenido principal */
+/* Contenido principal del body de la pagina */
 .body-content {
     color: white;
     padding: 15px;
@@ -228,11 +227,13 @@ html, body {
     flex: 1;
 }
 
+/* Estilo para los titulos */
 .body-content h1 {
     font-size: 1.3em;
     margin: 20px 0;
 }
 
+/* Estilo para los subtitulos */
 .body-content h2 {
     font-size: 1.1em;
     margin: 20px 0;
@@ -242,7 +243,7 @@ html, body {
     Diseño del footer de la pagina
    -------------------------------- */
 
-/* Pie de página */
+/* Diseño del footer de la pagina */
 .footer {
     /*background-color: rgb(51, 51, 51);*/
     background-color: rgb(5, 7, 14);
@@ -253,6 +254,10 @@ html, body {
     width: 100%;
 }
 
+/* ----------------------------------------------------
+    Animacion para el cursor de los mensajes dinamicos
+   ---------------------------------------------------- */
+
 /* Animación de parpadeo del cursor */
 @keyframes parpadeo {
     50% {
@@ -260,11 +265,11 @@ html, body {
     }
 }
 
-/* -----------------------------------
-   Diseño de las Categorías de Juegos
-   ----------------------------------- */
+/* ------------------------------------
+    Diseño de las Categorías de Juegos
+   ------------------------------------ */
 
-/* Opcional: Contenedor de textos para encabezados específicos (como en la página de Categorías) */
+/* Categorias de textos para encabezados específicos (como en la pagina de Categorías) */
 .category-text {
     position: relative;
     z-index: 1;
@@ -272,17 +277,20 @@ html, body {
     margin-top: -50px; /* Ajusta este valor para subir o bajar los textos */
 }
 
+/* Imagen de fondo en el header*/
 .category-text h1,
 .category-text h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    margin: 5px 0;
 }
 
+/* Estilo para el titulo de la categoria */
 .category-text h1 {
     font-weight: 500;
     color: #f500fd;
+    margin: 5px
 }
 
+/* Estilo para el subtitulo de la categoria */
 .category-text h2 {
     font-weight: 450;
     font-size: 130%;
@@ -304,21 +312,23 @@ html, body {
     border-radius: 8px;
     padding: 20px;
     width: 300px;
-    height: 200px; /* Define una altura para que se vea la imagen */
+    height: 200px; /* Define la altura para que se vea la imagen */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease; /* Transición para suavizar el efecto */
+    transition: transform 0.3s ease; /* Transicion para suavizar el efecto de agrandado */
     position: relative;
     overflow: hidden;
     background: rgb(15, 23, 42); /* Color de fondo por defecto en caso de que no haya imagen */
     background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Asegura que la imagen esté centrada */
+    background-position: center; /* Asegura que la imagen este bien centrada */
 }
 
+/* Efecto de agrandado al pasar el mouse por la caja de categorias */
 .category-box:hover {
     transform: scale(1.05); /* Agranda la caja al 105% de su tamaño original */
 }
 
+/* Estilo de el titulo de la categoria */
 .category-box h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
@@ -352,7 +362,7 @@ html, body {
     position: relative;
     padding: 200px;
     text-align: center;
-    margin-top: 50px; /* Ajusta según la altura del navbar */
+    margin-top: 50px; /* Ajustar segun la altura del navbar */
     overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
 }
 
@@ -399,7 +409,7 @@ html, body {
     Categorias - Game Cards (Tarjetas)
    ------------------------------------ */
 
-/* Contenido de las cajas de categorías */
+/* Contenido de las cajas de categorias */
 .categories-game-container {
     display: flex;
     flex-wrap: wrap;
@@ -408,13 +418,13 @@ html, body {
     padding: 20px;
 }
 
-/* Tarjetas de los juegos, descripcion y sus precios */
+/* Tarjetas de los juegos, titulos, descripcion y sus precios */
 .categories-game-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas bajen de línea en pantallas pequeñas */
-    gap: 20px; /* Espacio horizontal/vertical entre tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas bajen en linea para las pantallas pequeñas */
+    gap: 20px; /* Espacio horizontal y vertical entre tarjetas */
     justify-content: center; /* Centra las tarjetas horizontalmente */
-    margin-top: 20px; /* Espacio superior entre el título y las tarjetas */
+    margin-top: 20px; /* Espacio superior entre el titulo y las tarjetas */
 }
   
 /* Tarjeta individual */
@@ -439,28 +449,28 @@ html, body {
   
 /* Imagen del juego */
 .game-card-image {
-    width: 300px; /* Ancho fijo */
-    height: 180px; /* Alto fijo */
-    object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
+    width: 300px; /* Ancho */
+    height: 180px; /* Alto */
+    object-fit: cover; /* Mantenemos la proporcion de la imagen */
     border-radius: 8px;
     display: block;
     margin-bottom: 10px;
 }
   
-/* Título del juego */
+/* Titulo del juego */
 .category-game-box h2 {
     margin: 10px 0;
     font-size: 1.2rem;
 }
   
-/* Descripción */
+/* Descripcion del juego */
 .category-game-box p {
     font-size: 0.95rem;
     line-height: 1.4;
     margin-bottom: 10px;
 }
   
-/* Precio (opcional) */
+/* Precio del juego */
 .game-card-price {
     font-size: 1rem;
     font-weight: bold;
@@ -498,7 +508,7 @@ html, body {
     Boton Volver a la pagina anterior
    ----------------------------------- */
 
-/* Estilo futurista con efecto neón */
+/* Estilo futurista con efecto neon */
 .boton-volver {
     position: fixed;
     bottom: 113px;
@@ -523,7 +533,7 @@ html, body {
     box-shadow: 0 0 20px #ff00ff, 0 0 60px #00ffff;
 }
 
-/* Animación de brillo dinámico */
+/* Animacion de brillo dinamico */
 @keyframes glow {
     0% {
         box-shadow: 0 0 10px #00ffff, 0 0 40px #ff00ff;
@@ -533,11 +543,11 @@ html, body {
     }
 }
 
-/* -----------------------------------
-   Estilos para Iniciar Sesión (Modal)
-   ----------------------------------- */
+/* ----------------------------
+   Estilos para iniciar sesion
+   ---------------------------- */
 
-/* Modal para Iniciar Sesión (overlay) */
+/* Overlay para el iniciar sesion */
 .login-modal {
     display: none; /* Oculto por defecto */
     position: fixed;
@@ -546,11 +556,11 @@ html, body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
-    backdrop-filter: blur(5px);   /* Efecto de desenfoque en el fondo */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque en el fondo */
     z-index: 150;
 }
 
-/* Contenedor del formulario de Iniciar Sesión */
+/* Caja del formulario de iniciar sesion */
 .login-container {
     position: absolute;
     top: 50%;
@@ -588,7 +598,7 @@ html, body {
     border-radius: 4px;
 }
 
-/* Botón de Iniciar Sesión */
+/* Boton de iniciar sesion */
 .login-container button {
     margin-top: 15px;
     width: 100%;
@@ -602,11 +612,11 @@ html, body {
     transition: background 0.3s ease;
 }
 
-/* backgroun al pasar el mouse por el boton Entrar */
+/* Fondo para al pasar el mouse por el boton entrar */
 .login-container button:hover {
     background: #9402b9;
 }
-/* Botón para cerrar el modal */
+/* Boton para cerrar el menu de iniciar sesion */
 .login-container .close {
     position: absolute;
     top: 10px;
