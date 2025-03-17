@@ -159,8 +159,8 @@ html, body {
     position: relative;
     padding: 100px;
     text-align: center;
-    margin-top: 50px; /* Se ajusta segun la altura de la navbar */
-    overflow: hidden; /* Oculta partes de la imagen que sobresalgan */
+    margin-top: 0; /* Se ajusta segun la altura de la navbar */
+    
 }
 
 /* Imagen de fondo */
@@ -173,7 +173,16 @@ html, body {
     object-fit: cover;
     z-index: 0;
 }
-
+.titulo-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Mueve la imagen hacia la izquierda por la mitad de su ancho */
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Asegura que la imagen del título esté por encima de la imagen de fondo */
+}
 /* Overlay semitransparente para oscurecer la imagen */
 .header-estilo::before {
     content: "";
@@ -187,19 +196,14 @@ html, body {
 }
 
 /* Aseguramos que el texto o contenido se muestre por encima del overlay */
-.header-estilo h1,
-.header-estilo h2 {
-    position: relative;
-    z-index: 1;
+
+.header-estilo h2 {    
+    top: 50px; 
+    z-index: 2;
     text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
+    position: relative;
 }
 
-/* Contenido del encabezado de la pagina inicial */
-.header-estilo h1 {
-    margin: 5px 0;
-    color: rgba(255, 23, 255, 0.753);
-    font-weight: 700;
-}
 
 .header-estilo h2 {
     margin: 5px 0;
