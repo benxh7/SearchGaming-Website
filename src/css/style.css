@@ -173,13 +173,14 @@ html, body {
     object-fit: cover;
     z-index: 0;
 }
+
 .titulo-img {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%); /* Mueve la imagen hacia la izquierda por la mitad de su ancho */
-    width: 40%;
-    height: 100%;
+    width: 35%;
+    height: 123%;
     object-fit: cover;
     z-index: 1; /* Asegura que la imagen del título esté por encima de la imagen de fondo */
 }
@@ -198,7 +199,7 @@ html, body {
 /* Aseguramos que el texto o contenido se muestre por encima del overlay */
 
 .header-estilo h2 {    
-    top: 50px; 
+    top: 70px; 
     z-index: 2;
     text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
     position: relative;
