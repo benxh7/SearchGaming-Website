@@ -63,7 +63,7 @@ html, body {
 /* Convierte las barras en una X al darle click */
 .menu-toggle:checked + .menu-icon span:first-child {
     transform: rotate(45deg) translate(-3px, -1px);
-    background: #232323;
+    background: #ffffff;
 }
 .menu-toggle:checked + .menu-icon span:nth-child(2) {
     opacity: 0;
@@ -71,7 +71,7 @@ html, body {
 }
 .menu-toggle:checked + .menu-icon span:nth-child(3) {
     transform: rotate(-45deg) translate(-2px, -0.5px);
-    background: #232323;
+    background: #ffffff;
 }
 
 /* Estilo del navbar */
@@ -184,6 +184,7 @@ html, body {
     object-fit: cover;
     z-index: 1; /* Asegura que la imagen del título esté por encima de la imagen de fondo */
 }
+
 /* Overlay semitransparente para oscurecer la imagen */
 .header-estilo::before {
     content: "";
@@ -549,9 +550,9 @@ html, body {
     }
 }
 
-/* ----------------------------
-   Estilos para iniciar sesion
-   ---------------------------- */
+/* -----------------------------
+    Estilos para iniciar sesion
+   ----------------------------- */
 
 /* Overlay para el iniciar sesion */
 .login-modal {
@@ -633,9 +634,9 @@ html, body {
     cursor: pointer;
 }
 
-/* ===============================
-   Efecto de estrellas parallax
-   =============================== */
+/* ---------------------
+    Efecto de estrellas
+   --------------------- */
 
 /* Contenedor de estrellas ocupamos toda el area para las estrellas */
 .full-wh {
@@ -786,5 +787,71 @@ html, body {
     }
     to {
         transform: translateY(-2000px); /* Las movemos hacia arriba 2000px */
+    }
+}
+
+/* --------------------------------
+    Cambio de diseño al abrir la
+    pagina con un dispositvo movil
+    tablet o un computador
+   -------------------------------- */
+
+/* Ajustes para pantallas tablet y moviles grandes */
+@media screen and (max-width: 420px) {
+    /* Corrección de título e imagen en dispositivos móviles */
+    .header-estilo h2 {
+        font-size: 100%; /* Puedes probar con 90% o 0.9em si necesitas reducirlo más */
+        z-index: 2;
+        text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
+        position: relative;
+    }
+  
+    .titulo-img {
+        width: 100%;
+        height: auto;
+    }
+  
+    /* Aumenta la altura de la imagen de fondo */
+    .categorys-header-img {
+        height: 90%; /* Más alto que 40% */
+        object-fit: cover; /* Recorta sin deformar la imagen */
+        object-position: center; /* Centra la porción visible de la imagen */
+    }
+
+    .categorys-estilo {
+        padding: 60px 20px; /* Aumenta un poco el padding */
+        min-height: 50px;
+        position: relative; /* Por si necesitas posicionar texto encima */
+    }
+    
+    /* Ajusta el contenedor del texto para que ocupe todo el ancho y evite saltos forzados */
+    .category-general-text {
+        margin-top: -45px; /* Haz más negativo si quieres que se superponga más */
+        padding: 0 5%;
+        white-space: normal;
+        text-align: center;
+    }
+  
+    /* Ajusta el tamaño de los títulos y subtítulos */
+    .category-general-text h1 {
+        font-size: 0.9em;
+        line-height: 1.2;
+        margin: 10px 0;
+    }
+    .category-general-text h2 {
+        font-size: 0.9em;
+        line-height: 1.3;
+        margin: 10px 0;
+    }
+
+    /* Contenido principal */
+    .category-name-body-content {
+        color: rgb(255, 0, 234);
+        padding: 15px;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-top: -35px;
+        flex: 1;
     }
 }
