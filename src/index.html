@@ -43,11 +43,17 @@
         <span class="close" id="closeLogin">&times;</span>
         <h2>Iniciar Sesión</h2>
         <form>
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo">
+
+            <label for="nombre">Nombre de Usuario:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre de usuario">
     
             <label for="correo">Correo:</label>
             <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo">
+
+            <label for="correo">Fecha de Nacimiento:</label>
+            <input type="email" id="fecha-nacimiento" name="fecha" placeholder="Ingresa tu fecha de nacimiento">
     
             <label for="contraseña">Contraseña:</label>
             <input type="password" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña">
@@ -87,6 +93,7 @@
 
     <!-- Enlazar el script al final para evitar problemas de carga -->
     <script src="/src/scripts/app.js"></script>
+    <script src="/src/scripts/login.js"></script>
 </body>
 
 

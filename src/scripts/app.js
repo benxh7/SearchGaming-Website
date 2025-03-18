@@ -21,7 +21,6 @@ cursor.textContent = '|';
 cursor.style.animation = 'parpadeo 0.8s infinite step-start';
 mensajeDinamico.appendChild(cursor);
 
-
 // Función para escribir el mensaje letra por letra
 function escribirMensaje(mensaje, indiceMensaje) {
     let i = 0;
@@ -63,25 +62,3 @@ function borrarMensaje(mensaje, indiceMensaje) {
 
 // Inicia la animacion escribiendo el primer mensaje
 escribirMensaje(mensajes[0], 0);
-
-const loginBtn = document.getElementById('loginBtn');
-const loginModal = document.getElementById('loginModal');
-const closeLogin = document.getElementById('closeLogin');
-
-// Al hacer click en "Iniciar Sesión", se mostrara la casilla de registro
-loginBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    loginModal.style.display = 'block';
-});
-
-// Al hacer click en el botón de cerrar, ocultamos la casilla de registro
-closeLogin.addEventListener('click', function() {
-    loginModal.style.display = 'none';
-});
-
-// Cerrar la casilla si se hace click fuera del recuadro
-window.addEventListener('click', function(e) {
-    if (e.target === loginModal) {
-        loginModal.style.display = 'none';
-    }
-});
