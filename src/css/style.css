@@ -518,9 +518,9 @@ html, body {
 /* Estilo futurista con efecto neon */
 .boton-volver {
     position: fixed;
-    bottom: 113px;
-    right: 20px;
-    padding: 12px 25px;
+    top: 8px; /* Lo posiciona en la parte superior */
+    right: 20px; /* Puedes ajustarlo según donde lo quieras */
+    padding: 8px 25px;
     font-size: 15px;
     font-weight: bold;
     text-transform: uppercase;
@@ -532,6 +532,7 @@ html, body {
     box-shadow: 0 0 10px #00ffff, 0 0 40px #ff00ff;
     transition: all 0.3s ease-in-out;
     animation: glow 1.5s infinite alternate;
+    z-index: 300; /* Asegura que esté por encima de la navbar */
 }
 
 /* Efecto cuando el usuario pasa el mouse */
