@@ -1,12 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Elementos del DOM
-    const loginBtn = document.getElementById("loginBtn");
-    const loginModal = document.getElementById("loginModal");
-    const closeLogin = document.getElementById("closeLogin");
+    // Ya no necesitamos obtener el botón de "loginBtn" ni "closeLogin"
     const form = document.querySelector("#loginModal form");
+    const limpiarBtn = document.getElementById("limpiarBtn");
 
-    // Se asume que en el HTML ya se han definido campos con IDs únicos
-    // Por ejemplo, usamos "nombre-completo" y "nombre-usuario" para diferenciarlos.
     const nombreCompleto = document.getElementById("nombre-completo");
     const nombreUsuario = document.getElementById("nombre-usuario");
     const email = document.getElementById("correo");
@@ -14,17 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const direccion = document.getElementById("direccion");
     const contraseña = document.getElementById("contraseña");
     const confirmarContraseña = document.getElementById("confirmar");
-
-    // Mostrar el modal al hacer clic en "Iniciar Sesión"
-    loginBtn.addEventListener("click", function(e) {
-        e.preventDefault();
-        loginModal.style.display = "block";
-    });
-
-    // Cerrar el modal al hacer clic en la "X"
-    closeLogin.addEventListener("click", function() {
-        loginModal.style.display = "none";
-    });
 
     // Botón para limpiar el formulario y remover mensajes de error
     limpiarBtn.addEventListener("click", function() {
@@ -102,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (errorDiv.parentNode) {
                 errorDiv.parentNode.removeChild(errorDiv);
             }
-            // Se remueve este listener para evitar múltiples ejecuciones
             element.removeEventListener("input", clearError);
         };
         element.addEventListener("input", clearError);
