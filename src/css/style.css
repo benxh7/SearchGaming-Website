@@ -624,6 +624,7 @@ html, body {
 .login-container button:hover {
     background: #9402b9;
 }
+
 /* Boton para cerrar el menu de iniciar sesion */
 .login-container .close {
     position: absolute;
@@ -633,6 +634,36 @@ html, body {
     font-weight: bold;
     color: #333;
     cursor: pointer;
+}
+
+/* Resalta el borde del input en rojo */
+.login-container input.is-invalid {
+    border: 1px solid red;
+}
+
+/* Ajuste para el icono de error: más pequeño */
+.error-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 8px;
+    vertical-align: middle; /* Centra verticalmente respecto al texto */
+    margin-top: -2px;      /* Ajusta este valor hasta que esté alineado como deseas */
+}
+
+/* Estilo para el mensaje de error debajo del campo, alineado a la izquierda */
+.invalid-feedback {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -5px;
+    text-align: left;
 }
 
 /* ---------------------
