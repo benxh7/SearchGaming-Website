@@ -1,9 +1,16 @@
 # Tarea Semana 1 Programación Web
 
-## Caso
-Somos una PYME que desea promocionar la venta de su catálogo de videojuegos, 
-y deseamos que su grupo de trabajo nos cree un sitio web que permita 
-mostrar la información de cada uno de los juegos que tenemos disponibles
+## ¿Que es Search Gaming?
+**Search Gaming** es nuestro primer proyecto, creado para los amantes de los video juegos ¡Como nosotros!
+Desarrollamos esta pagina para agregar y informar sobre una variedad de juegos, esto ordenados por categorias,
+dia a dia iremos superandonos para que aqui, puedas encontrar los juegos que mas te gusten.
+
+## Tecnologias
+
+- HTML5
+- CSS
+- JS
+- Bootstrap 5.0
 
 ## Tareas - Semana 1
 1. **Pagina de Principal:** Pagina en donde los usuarios accederan para luego proceder a buscar juegos. ✔️ **AÑADIDO**
@@ -33,9 +40,3 @@ mostrar la información de cada uno de los juegos que tenemos disponibles
  - Deberán aparecer dos botones, uno para enviar el formulario y otro para limpiar el formulario. ✔️
 5. La página web deberá verse de manera correcta y mantener su diseño para 3 distintos tipos de pantalla como mínimo (pequeños, medianos y grandes), ya que al verse en un navegador puede accederse desde un pc, notebook, tablet o celular. ✔️ **AÑADIDO**
 6. Todas las operaciones grupales necesarias para el desarrollo de esta actividad deberán alojarse en el repositorio. ✔️ **AÑADIDO**
-
-## Requerimientos
-
-- HTML5
-- CSS
-- JS
