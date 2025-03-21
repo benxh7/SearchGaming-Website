@@ -199,19 +199,15 @@ html, body {
 
 /* Aseguramos que el texto o contenido se muestre por encima del overlay */
 
-.header-estilo h2 {    
+.header-estilo h2 { 
+    margin: 5px 0;   
     top: 70px; 
     z-index: 2;
-    text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
-    position: relative;
-}
-
-
-.header-estilo h2 {
-    margin: 5px 0;
     color: rgb(17, 161, 245);
+    text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
     font-weight: 450;
     font-size: 130%;
+    position: relative;
 }
 
 /* Estilos para el titulo */
@@ -854,49 +850,5 @@ html, body {
     .titulo-img {
         width: 100%;
         height: auto;
-    }
-  
-    /* Aumenta la altura de la imagen de fondo */
-    .categorys-header-img {
-        height: 90% !important; /* Más alto que 40% */
-        object-fit: cover; /* Recorta sin deformar la imagen */
-        object-position: center; /* Centra la porción visible de la imagen */
-    }
-
-    .categorys-estilo {
-        padding: 60px 20px; /* Aumenta un poco el padding */
-        min-height: 50px;
-        position: relative; /* Por si necesitas posicionar texto encima */
-    }
-    
-    /* Ajusta el contenedor del texto para que ocupe todo el ancho y evite saltos forzados */
-    .category-general-text {
-        margin-top: -45px; /* Haz más negativo si quieres que se superponga más */
-        padding: 0 5%;
-        white-space: normal;
-        text-align: center;
-    }
-  
-    /* Ajusta el tamaño de los títulos y subtítulos */
-    .category-general-text h1 {
-        font-size: 0.9em;
-        line-height: 1.2;
-        margin: 10px 0;
-    }
-    .category-general-text h2 {
-        font-size: 0.9em;
-        line-height: 1.3;
-        margin: 10px 0;
-    }
-
-    /* Contenido principal */
-    .category-name-body-content {
-        color: rgb(255, 0, 234);
-        padding: 15px;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: bold;
-        margin-top: -35px;
-        flex: 1;
     }
 }
