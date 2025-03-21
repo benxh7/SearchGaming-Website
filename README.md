@@ -22,14 +22,14 @@ dia a dia iremos superandonos para que aqui, puedas encontrar los juegos que mas
 
 ## Tareas - Semana 2
 1. El cliente requiere un formulario de registro de sus futuros compradores en su aplicación web, para de esa manera poder generar recompensas a aquellos que hayan realizado más compras y tener un registro de los juegos que compran en su tienda. ✔️ **AÑADIDO**
-2. El estilo y diseño de la aplicación web deberá mantenerse (responsividad, colores, menú, entre otros elementos que haya implementado en la semana 1). 🔨 **EN DESARROLLO**
+2. El estilo y diseño de la aplicación web deberá mantenerse (responsividad, colores, menú, entre otros elementos que haya implementado en la semana 1). ✔️ **AÑADIDO**
 3. El formulario deberá contener los siguientes datos: ✔️ **AÑADIDO**
  - Nombre completo de la persona. ✔️
  - Un nombre usuario para poder iniciar sesión más adelante en su aplicación web. ✔️
  - Un correo electrónico. ✔️
  - Su clave de ingreso a la aplicación (considerar el repetir contraseña). ✔️
  - Su fecha de nacimiento y su dirección de despacho. ✔️
-4. Para las validaciones del formulario anterior se deberá considerar lo siguiente: 🔨 **EN DESARROLLO**
+4. Para las validaciones del formulario anterior se deberá considerar lo siguiente: ✔️ **AÑADIDO**
  - Ninguno de los campos del formulario (exceptuando la dirección de despacho) puede estar vacíos o nulos. ✔️
  - El correo electrónico debe seguir el formato de un email. ✔️
  - Las dos contraseñas deben ser iguales. ✔️
