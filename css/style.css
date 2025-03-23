@@ -617,7 +617,7 @@ html, body {
     margin-top: 5px;
     width: 100%;
     padding: 10px;
-    background: #0059ff;
+    background: #99018081;
     border: none;
     color: #fff;
     font-weight: bold;
@@ -628,7 +628,7 @@ html, body {
 
 /* Efecto hover para el boton principal (cuando pasamos el mouse sobre el boton) */
 #loginModal .btn-primary:hover {
-    background: #003cac;
+    background: #bd1fec;
 }
 
 /* Boton secundario (Limpiar) */
