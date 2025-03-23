@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
 
-        // Si todo es válido, se envían los datos vía GET y se redirige
+        // Si todo es válido, se envían los datos usando el metodo GET y se redirige
         if (isValid) {
             const params = new URLSearchParams(new FormData(form)).toString();
             const url = (form.getAttribute("action") || "index.html") + "?" + params;
