@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Ya no necesitamos obtener el botón de "loginBtn" ni "closeLogin"
-    const form = document.querySelector("#loginModal form");
-    const limpiarBtn = document.getElementById("limpiarBtn");
+    var form = document.querySelector("#loginModal form");
+    var limpiarBtn = document.getElementById("limpiarBtn");
 
-    const nombreCompleto = document.getElementById("nombre-completo");
-    const nombreUsuario = document.getElementById("nombre-usuario");
-    const email = document.getElementById("correo");
-    const fechaNacimiento = document.getElementById("fecha-nacimiento");
-    const direccion = document.getElementById("direccion");
-    const contraseña = document.getElementById("contraseña");
-    const confirmarContraseña = document.getElementById("confirmar");
+    var nombreCompleto = document.getElementById("nombre-completo");
+    var nombreUsuario = document.getElementById("nombre-usuario");
+    var email = document.getElementById("correo");
+    var fechaNacimiento = document.getElementById("fecha-nacimiento");
+    var direccion = document.getElementById("direccion");
+    var contraseña = document.getElementById("contraseña");
+    var confirmarContraseña = document.getElementById("confirmar");
 
     // Botón para limpiar el formulario y remover mensajes de error
     limpiarBtn.addEventListener("click", function() {
@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Si todo es válido, se envían los datos usando el metodo GET y se redirige
         if (isValid) {
-            const params = new URLSearchParams(new FormData(form)).toString();
-            const url = (form.getAttribute("action") || "index.html") + "?" + params;
+            var params = new URLSearchParams(new FormData(form)).toString();
+            var url = (form.getAttribute("action") || "index.html") + "?" + params;
             window.location.href = url;
         }
     });
@@ -66,11 +66,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // Función para mostrar mensajes de error
     function showError(element, message) {
         element.classList.add("is-invalid");
-        const errorDiv = document.createElement("div");
+        var errorDiv = document.createElement("div");
         errorDiv.classList.add("invalid-feedback");
     
         // Creamos el icono de error: un span que contendrá la exclamación
-        const iconSpan = document.createElement("span");
+        var iconSpan = document.createElement("span");
         iconSpan.classList.add("error-icon");
         iconSpan.textContent = "!";
         
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         element.parentNode.insertBefore(errorDiv, element.nextSibling);
         
         // Listener para quitar el error cuando se ingrese texto
-        const clearError = function() {
+        var clearError = function() {
             element.classList.remove("is-invalid");
             if (errorDiv.parentNode) {
                 errorDiv.parentNode.removeChild(errorDiv);
@@ -100,16 +100,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Función para validar el formato de email
     function validateEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
 
     // Función para validar que el usuario tenga al menos 13 años
     function validateAge(fecha) {
-        const birthDate = new Date(fecha);
-        const today = new Date();
+        var birthDate = new Date(fecha);
+        var today = new Date();
         let age = today.getFullYear() - birthDate.getFullYear();
-        const m = today.getMonth() - birthDate.getMonth();
+        var m = today.getMonth() - birthDate.getMonth();
         if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
             age--;
         }
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Función para validar la contraseña: 6-18 caracteres, al menos una mayúscula y un dígito
     function validatePassword(password) {
-        const regex = /^(?=.*[A-Z])(?=.*\d)[\S]{6,18}$/;
+        var regex = /^(?=.*[A-Z])(?=.*\d)[\S]{6,18}$/;
         return regex.test(password);
     }
 });

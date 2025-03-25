@@ -563,21 +563,26 @@ html, body {
 }
 
 /* Limita el ancho del modal para que coincida con el width de 300px */
-#loginModal .modal-dialog {
+#loginModal .modal-dialog,
+#registerModal .modal-dialog {
     max-width: 350px;
     margin: auto;
 }
 
 /* Menu del registro fondo, padding, borde redondeado y sombra */
-#loginModal .modal-content {
+#loginModal .modal-content,
+#registerModal .modal-content {
     background: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-width: 500px;
 }
 
 /* Encabezado del menu (Iniciar Sesion) tambien quitamos la línea inferior para emular el estilo original */
-#loginModal .modal-header {
+#loginModal .modal-header,
+#registerModal .modal-header {
     border-bottom: none;
     position: relative;
     padding: 16px;
@@ -585,7 +590,8 @@ html, body {
 }
 
 /* Creacion del boton X "cerrar" */
-#loginModal .btn-close {
+#loginModal .btn-close,
+#registerModal .btn-close {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -595,7 +601,8 @@ html, body {
 }
 
 /* Titulos de cada cuadro de texto del menu  */
-#loginModal .form-label {
+#loginModal .form-label,
+#registerModal .form-label {
     display: block;
     margin: 10px 0 -1px;
     text-align: left;
@@ -604,7 +611,8 @@ html, body {
 }
 
 /* Contenido dentro de cada cuadro de texto del menu */
-#loginModal .form-control {
+#loginModal .form-control,
+#registerModal .form-control {
     width: 100%;
     padding: 4px;
     margin-bottom: 10px;
@@ -613,7 +621,8 @@ html, body {
 }
 
 /* Boton principal (Crear Cuenta) estilo similar al antiguo boton de CSS */
-#loginModal .btn-primary {
+#loginModal .btn-primary,
+#registerModal .btn-primary {
     margin-top: 5px;
     width: 100%;
     padding: 10px;
@@ -627,12 +636,14 @@ html, body {
 }
 
 /* Efecto hover para el boton principal (cuando pasamos el mouse sobre el boton) */
-#loginModal .btn-primary:hover {
+#loginModal .btn-primary:hover,
+#registerModal .btn-primary:hover {
     background: #bd1fec;
 }
 
 /* Boton secundario (Limpiar) */
-#loginModal .btn-secondary {
+#loginModal .btn-secondary,
+#registerModal .btn-secondary {
     margin-top: 5px;
     width: 100%;
     padding: 10px;
@@ -641,17 +652,21 @@ html, body {
 
 /* Ajuste de ancho para los botones */
 #loginModal .btn-primary,
-#loginModal .btn-secondary {
+#loginModal .btn-secondary,
+#registerModal .btn-primary,
+#registerModal .btn-secondary {
     width: auto !important;
 }
 
 /* Resaltar borde de input invalido */
-#loginModal .form-control.is-invalid {
+#loginModal .form-control.is-invalid,
+#registerModal .form-control.is-invalid {
     border: 1px solid red;
 }
 
 /* Mensajes de error */
-#loginModal .invalid-feedback {
+#loginModal .invalid-feedback,
+#registerModal .invalid-feedback {
     color: red;
     font-size: 0.7em;
     margin-top: -5px;
@@ -659,7 +674,8 @@ html, body {
 }
 
 /* Icono de error pequeño */
-#loginModal .error-icon {
+#loginModal .error-icon,
+#registerModal .error-icon {
     display: inline-block;
     width: 10px;
     height: 10px;

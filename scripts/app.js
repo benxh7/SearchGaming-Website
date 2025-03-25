@@ -1,22 +1,22 @@
-const mensajeDinamico = document.querySelector('.mensaje-dinamico');
+var mensajeDinamico = document.querySelector('.mensaje-dinamico');
 
 // Mensajes dinámicos que mostraremos en el inicio de la pagina
-const mensajes = [
+var mensajes = [
     'Encuentra los mejores juegos y comunidad con nosotros.',
     'Pensada por gamers para gamers.',
     'Encuentra el juego que más te guste entre nuestras diferentes categorías.',
 ];
 
 // Tiempo entre cada letra (en milisegundos) para escribir y borrar
-const tiempoEntreLetras = 100; // 0.1 segundos por letra al escribir
-const tiempoEntreBorrado = 30; // Tiempo especial para el borrado del mensaje
-const tiempoEntreMensajes = 5000; // 5 segundos de pausa al terminar de escribir
+var tiempoEntreLetras = 100; // 0.1 segundos por letra al escribir
+var tiempoEntreBorrado = 30; // Tiempo especial para el borrado del mensaje
+var tiempoEntreMensajes = 5000; // 5 segundos de pausa al terminar de escribir
 
 /* 
 Creamos un cursor que parpadea para simular
 el efecto de escritura de un mensaje 
 */
-const cursor = document.createElement('span');
+var cursor = document.createElement('span');
 cursor.textContent = '|';
 cursor.style.animation = 'parpadeo 0.8s infinite step-start';
 mensajeDinamico.appendChild(cursor);
