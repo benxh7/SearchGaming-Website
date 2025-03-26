@@ -30,7 +30,7 @@
             <!-- Aquí solo cambiamos el "id" por atributos de Bootstrap para abrir el modal -->
             <li class="menu">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#accountModal">Cuenta</a>
-              </li>
+            </li>
         </ul>
     </nav>
 
@@ -49,22 +49,35 @@
             <div class="modal-content">
                 <!-- Encabezado del modal -->
                 <div class="modal-header">
-                    <h5 class="modal-title text-center" id="accountModalLabel">Iniciar Sesión o Registrarse</h5>
+                    <h5 class="modal-title w-100 text-center" id="accountModalLabel">Iniciar Sesión o Registrarse</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <!-- Cuerpo del modal: dos botones grandes -->
+                <!-- Cuerpo del modal con grid (invirtiendo el orden de las columnas) -->
                 <div class="modal-body">
-                    <div class="d-flex flex-column gap-3">
-                        <!-- Botón para Iniciar Sesión -->
-                        <button type="button" class="btn btn-success btn-lg w-50" data-bs-dismiss="modal" 
-                            data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Iniciar Sesión
-                        </button>
-                        <!-- Botón para Registrarse -->
-                        <button type="button" class="btn btn-primary btn-lg w-50" data-bs-dismiss="modal"
-                            data-bs-toggle="modal" data-bs-target="#registerModal"> 
-                            Registrarse
-                        </button>
+                    <div class="row align-items-center">
+                        <!-- Columna para los botones (ahora a la izquierda) -->
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex flex-column gap-2">
+                                <!-- Botón para Iniciar Sesión -->
+                                <button type="button" class="btn btn-success btn-sm w-100" data-bs-dismiss="modal"
+                                    data-bs-toggle="modal" data-bs-target="#loginModal">
+                                    Iniciar Sesión
+                                </button>
+                                <!-- Botón para Registrarse -->
+                                <button type="button" class="btn btn-primary btn-sm w-100" data-bs-dismiss="modal"
+                                    data-bs-toggle="modal" data-bs-target="#registerModal">
+                                    Registrarse
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Columna para el texto de beneficios (ahora a la derecha) -->
+                        <div class="col-12 col-md-6">
+                            <p class="mb-0">
+                                ¡Inicia sesión o regístrate para guardar tus juegos o hacer pedidos en el mismo sitio!<br><br>
+                                asasasa<br><br>
+                                asasasa
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
