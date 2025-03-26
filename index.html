@@ -60,7 +60,7 @@
                             <p class="text-center mb-0 fs-5">
                                 Clientes registrados<br>
                             </p>
-                            <!-- Botón para Iniciar Sesión -->
+                            <!-- Boton para Iniciar Sesión -->
                             <button type="button" class="btn btn-iniciar-sesion btn-lg w-75" data-bs-dismiss="modal"
                                 data-bs-toggle="modal" data-bs-target="#loginModal">
                                 Iniciar Sesión
@@ -70,7 +70,7 @@
                                 Regístrate ahora y disfruta de ofertas exclusivas,<br>
                                 descuentos y mucho más.
                             </p>
-                            <!-- Botón para Registrarse -->
+                            <!-- Boton para Registrarse -->
                             <button type="button" class="btn btn-registrarse btn-lg w-75" data-bs-dismiss="modal"
                                 data-bs-toggle="modal" data-bs-target="#registerModal">
                                 Registrarse
@@ -91,27 +91,50 @@
                     <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <!-- Cuerpo: aquí podrías colocar tu formulario de login -->
                 <div class="modal-body">
-                    <div class="text-center mb-3">
-                        <!-- Ejemplo: Botón de login con Microsoft -->
-                        <button class="btn btn-success w-100 mb-3">Iniciar Sesión con Microsoft</button>
-                        <!-- O con Google, etc. -->
-                    </div>
                     <hr>
-                    <!-- Si quieres un formulario de login propio: usuario, contraseña... -->
                     <form>
                         <div class="mb-3">
                             <label for="usuarioLogin" class="form-label">Usuario o Correo:</label>
-                            <input type="text" class="form-control" id="usuarioLogin"
+                            <input type="text" class="form-control" id="usuarioLogin" name="usuario"
                                 placeholder="Ingresa tu usuario/correo">
                         </div>
                         <div class="mb-3">
                             <label for="contraseñaLogin" class="form-label">Contraseña:</label>
-                            <input type="password" class="form-control" id="contraseñaLogin"
+                            <input type="password" class="form-control" id="contraseñaLogin" name="contraseña"
                                 placeholder="Ingresa tu contraseña">
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal"
+                            data-bs-target="#recoverPasswordModal">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Recuperación de Contraseña -->
+    <div class="modal fade" id="recoverPasswordModal" tabindex="-1" aria-labelledby="recoverPasswordModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="recoverPasswordModalLabel">Recuperar Contraseña</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Mensaje de alerta -->
+                    <div id="recoverMessage"></div>
+                    <form id="recoverForm">
+                        <div class="mb-3">
+                            <label for="recoverEmail" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="recoverEmail" placeholder="Ingresa tu correo">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Código</button>
                     </form>
                 </div>
             </div>
