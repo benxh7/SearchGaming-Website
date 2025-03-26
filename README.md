@@ -78,7 +78,7 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 - [ ] Archivo `.zip` o `.rar` con el código fuente completo.
 
 ### 🧱 Frontend
-- [✔️] Estructura con HTML + Bootstrap
+- [x] Estructura con HTML + Bootstrap
 - [ ] Interacciones con JS o jQuery
 - [ ] Estilos y diseño responsivo 
 - [ ] Validaciones de formularios 
