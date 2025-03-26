@@ -571,14 +571,26 @@ html, body {
 }
 
 /* Limita el ancho del modal para que coincida con el width de 300px */
-#loginModal .modal-dialog,
+#loginModal .modal-dialog {
+    max-width: 350px;
+    margin: auto;
+}
+
 #registerModal .modal-dialog {
     max-width: 350px;
     margin: auto;
 }
 
 /* Menu del registro fondo, padding, borde redondeado y sombra */
-#loginModal .modal-content,
+#loginModal .modal-content {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    max-width: 500px;
+}
+
 #registerModal .modal-content {
     background: #ffffff;
     padding: 20px;
@@ -589,7 +601,13 @@ html, body {
 }
 
 /* Encabezado del menu (Iniciar Sesion) tambien quitamos la línea inferior para emular el estilo original */
-#loginModal .modal-header,
+#loginModal .modal-header {
+    border-bottom: none;
+    position: relative;
+    padding: 16px;
+    margin-bottom: -30px;
+}
+
 #registerModal .modal-header {
     border-bottom: none;
     position: relative;
@@ -598,7 +616,15 @@ html, body {
 }
 
 /* Creacion del boton X "cerrar" */
-#loginModal .btn-close,
+#loginModal .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
 #registerModal .btn-close {
     position: absolute;
     top: 10px;
@@ -609,7 +635,14 @@ html, body {
 }
 
 /* Titulos de cada cuadro de texto del menu  */
-#loginModal .form-label,
+#loginModal .form-label {
+    display: block;
+    margin: 10px 0 -1px;
+    text-align: left;
+    font-weight: 500;
+    color: #333;
+}
+
 #registerModal .form-label {
     display: block;
     margin: 10px 0 -1px;
@@ -619,7 +652,14 @@ html, body {
 }
 
 /* Contenido dentro de cada cuadro de texto del menu */
-#loginModal .form-control,
+#loginModal .form-control {
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
 #registerModal .form-control {
     width: 100%;
     padding: 4px;
@@ -645,7 +685,19 @@ html, body {
 }
 
 /* Boton principal (Crear Cuenta) estilo similar al antiguo boton de CSS */
-#loginModal .btn-primary,
+#loginModal .btn-primary {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    background: #99018081;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
 #registerModal .btn-primary {
     margin-top: 5px;
     width: 100%;
@@ -660,13 +712,22 @@ html, body {
 }
 
 /* Efecto hover para el boton principal (cuando pasamos el mouse sobre el boton) */
-#loginModal .btn-primary:hover,
+#loginModal .btn-primary:hover {
+    background: #bd1fec;
+}
+
 #registerModal .btn-primary:hover {
     background: #bd1fec;
 }
 
 /* Boton secundario (Limpiar) */
-#loginModal .btn-secondary,
+#loginModal .btn-secondary {
+    margin-top: 5px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
 #registerModal .btn-secondary {
     margin-top: 5px;
     width: 100%;
