@@ -628,6 +628,22 @@ html, body {
     border-radius: 4px;
 }
 
+/* Botones iniciar sesion y registrarse personalizados */
+.btn-iniciar-sesion {
+    background: linear-gradient(to right bottom, rgb(125, 21, 173), rgb(91, 178, 233));
+    color: white;
+}
+.btn-iniciar-sesion:hover {
+    background: linear-gradient(to right bottom, rgb(84, 0, 122), rgb(0, 178, 233));
+}
+.btn-registrarse {
+    background: linear-gradient(to right bottom, rgb(91, 201, 235), rgb(125, 21, 173));
+    color: white;
+}
+.btn-registrarse:hover {
+    background: linear-gradient(to right bottom, rgb(0, 178, 233), rgb(84, 0, 122));
+}
+
 /* Boton principal (Crear Cuenta) estilo similar al antiguo boton de CSS */
 #loginModal .btn-primary,
 #registerModal .btn-primary {
