@@ -9,7 +9,7 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-## ESTADO DEL PROYECTO:
+## 🤝 ESTADO DEL PROYECTO:
 
  -- EN DESARROLLO -- 
 
