@@ -79,27 +79,27 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 
 ### 🧱 Frontend
 - [x] Estructura con HTML + Bootstrap
-- [ ] Interacciones con JS o jQuery
-- [ ] Estilos y diseño responsivo 
-- [ ] Validaciones de formularios 
+- [x] Interacciones con JS o jQuery
+- [x] Estilos y diseño responsivo 
+- [x] Validaciones de formularios 
 
 ### 🔐 Seguridad
-- [ ] Validaciones completas de contraseñas
+- [x] Validaciones completas de contraseñas
 - [ ] Roles y privilegios diferenciados
 
 ### 👤 Gestión de usuarios
-- [ ] Login funcional
-- [ ] Registro con validación
+- [x] Login funcional
+- [x] Registro con validación
 - [ ] Recuperación de contraseña
 - [ ] Modificación de perfil
 
 ### 🎨 Personalización
-- [ ] Diseño visual definido
-- [ ] Nombre del sistema
+- [x] Diseño visual definido
+- [x] Nombre del sistema
 - [ ] Logo implementado
-- [ ] Imágenes y colores coherentes
+- [x] Imágenes y colores coherentes
 
 ### 🤝 Organización del equipo
-- [ ] Repositorio Git creado y compartido
-- [ ] Revisión de avances entre integrantes
-- [ ] Documentación básica por componente
+- [x] Repositorio Git creado y compartido
+- [x] Revisión de avances entre integrantes
+- [x] Documentación básica por componente
