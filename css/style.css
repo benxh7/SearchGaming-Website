@@ -556,6 +556,16 @@ html, body {
            (Bootstrap)
    ----------------------------- */
 
+#accountModal .btn-primary:hover {
+    background-color: #7a007a !important;
+}
+
+/* Cambiar el color de fondo del botón primario dentro del modal de registro */
+#accountModal .btn-primary {
+    background-color: #ff00ff !important;
+    border: #00ffff;
+}
+
 /* Estilo para el modal de inicio de sesion */
 .modal-backdrop {
     background-color: rgba(0, 0, 0, 0.5) !important; /* Fondo semitransparente */
