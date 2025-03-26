@@ -35,7 +35,7 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 
 
 - 🔧 Benjamín Morales — Lead Developer
-- 📊 Romina Torres — Frontend JS & Base de Datos
+- 📊 Romina Torres — Frontend JS & Data Base
 - 🎨 Renato Tan — UI/UX Designer & CSS Developer
 
 ---------------------------------------------------------------------------------------------------------------------------------------
@@ -78,7 +78,7 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 - [ ] Archivo `.zip` o `.rar` con el código fuente completo.
 
 ### 🧱 Frontend
-- [ ] Estructura con HTML + Bootstrap
+- [✔️] Estructura con HTML + Bootstrap
 - [ ] Interacciones con JS o jQuery
 - [ ] Estilos y diseño responsivo 
 - [ ] Validaciones de formularios 
