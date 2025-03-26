@@ -34,9 +34,9 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 ## 👥 ROLES Y USUARIOS:
 
 
-🔧 Benjamín Morales — Lead Developer
-📊 Romina Torres — Frontend JS & Base de Datos
-🎨 Renato Tan — UI/UX Designer & CSS Developer
+- 🔧 Benjamín Morales — Lead Developer
+- 📊 Romina Torres — Frontend JS & Base de Datos
+- 🎨 Renato Tan — UI/UX Designer & CSS Developer
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 

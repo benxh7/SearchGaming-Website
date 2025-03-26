@@ -103,7 +103,7 @@ html, body {
 }
 
 .navbar ul li {
-    margin: 0 15px; /* Ajusta el valor según lo que necesites */
+    margin: 0 15px; /* Ajusta la distancia entre categorias */
 }
 
 /* Cuando el checkbox esta marcado desplaza el menu a la vista dandole un efecto como de desplazamiento */
