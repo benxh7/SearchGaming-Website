@@ -89,35 +89,38 @@ html, body {
 /* Estilo de la lista del menu */
 .navbar ul {
     position: fixed;
-    top: 0;
-    left: -290px;  /* Primero inicia fuera de la pantalla */
-    width: 200px;
-    height: 100%;
+    top: -100%;  /* Oculta el menú fuera de la vista por arriba */
+    left: 0;
+    width: 100%;
     background: linear-gradient(to right bottom, rgba(235, 83, 202, 0.7), rgba(141, 6, 231, 0.7));
-    padding-top: 50px;  /* Espacio para cada icono del menu */
+    padding: 5.5px 0;
     display: flex;
-    flex-direction: column;
-    transition: left 0.3s ease;
+    flex-direction: row;  /* Orden horizontal */
+    justify-content: center;  /* Centra los ítems horizontalmente */
+    transition: top 0.3s ease;
     margin: 0;
     list-style: none;
 }
 
+.navbar ul li {
+    margin: 0 15px; /* Ajusta el valor según lo que necesites */
+}
+
 /* Cuando el checkbox esta marcado desplaza el menu a la vista dandole un efecto como de desplazamiento */
 .menu-toggle:checked ~ ul {
-    left: 0;
+    top: 0;
 }
 
 /* Estilos para los subvinculos dentro del menu (se aplican a todas las opciones) */
 .navbar ul li a {
     color: rgb(255, 255, 255);
     padding: 5px 0px;
-    width: 70%;
+    width: 100%;
     margin: 5px auto; /* Centra el elemento */
     text-decoration: none;
     display: block;
     transition: background 0.3s ease;
     position: relative;
-    border: 1px solid #fff;  /* Borde blanco para cada opcion */
     border-radius: 7px;
 }
 
@@ -143,11 +146,6 @@ html, body {
 /* Efecto para la opcion activada si el enlace tiene la clase "active" la linea se muestra */
 .navbar ul li a.active::before {
     transform: scale3d(1, 1, 1);
-}
-
-/* Efecto hover para el fondo del enlace */
-.navbar ul li a:hover {
-    background: #c92ca7;
 }
 
 /* --------------------------------------
