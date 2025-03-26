@@ -90,7 +90,7 @@ Día a día iremos superándonos para que siempre puedas encontrar los juegos qu
 ### 👤 Gestión de usuarios
 - [x] Login funcional
 - [x] Registro con validación
-- [ ] Recuperación de contraseña
+- [x] Recuperación de contraseña
 - [ ] Modificación de perfil
 
 ### 🎨 Personalización
