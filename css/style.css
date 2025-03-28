@@ -1007,3 +1007,14 @@ html, body {
         height: auto;
     }
 }
+
+/* ------------------------------
+    Integración de logo SG 
+   ------------------------------ */
+
+   .logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    filter: drop-shadow(0 0 8px #00fff7); /* brillo tipo cian */
+  }
