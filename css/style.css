@@ -1013,10 +1013,14 @@ html, body {
    ------------------------------ */
 
    .footer-logo {
-    width: 80px;
+    width: 60px;
     height: auto;
     filter: drop-shadow(0 0 6px #00fff7);
     transition: transform 0.3s ease;
-    margin-bottom: 0.5rem;
+  }
+  
+  .footer-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #ff00ff);
   }
   
