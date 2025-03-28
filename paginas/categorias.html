@@ -2,142 +2,128 @@
 <html lang="es">
 
 <head>
-    <!-- Metadatos -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Gaming | Categorias</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-      <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" href="../css/style.css">
-
-
+  <!-- Metadatos -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Gaming | Categorias</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+  <!-- Menú de navegación -->
+  <nav class="navbar">
+    <!-- Checkbox oculto que controla el estado del menú -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <!-- Label que funciona como botón de menú (hamburguesa) con animación -->
+    <label for="menu-toggle" class="menu-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
     <!-- Menú de navegación -->
-    <nav class="navbar">
-        <!-- Checkbox oculto que controla el estado del menú -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <!-- Label que funciona como botón de menú (hamburguesa) con animación -->
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <!-- Menú de navegación -->
-        <ul class="nav-list">
-            <li class="menu"><a href="../index.html">Inicio</a></li>
-            <li class="menu"><a href="categorias.html">Categorias</a></li>
-            <li class="menu">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#accountModal">Cuenta</a>
-            </li>
-        </ul>
-    </nav>
+    <ul class="nav-list">
+      <li class="menu"><a href="../index.html">Inicio</a></li>
+      <li class="menu"><a href="categorias.html">Categorias</a></li>
+    </ul>
+  </nav>
 
-    <!-- Efecto de estrellas para el fondo -->
-    <div class="bg-animation">
-        <div id="stars"></div>
-        <div id="stars2"></div>
-        <div id="stars3"></div>
-        <div id="stars4"></div>
+  <!-- Efecto de estrellas para el fondo -->
+  <div class="bg-animation">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="header-estilo">
+    <img src="../assets/images/games.jpg" alt="Imagen de controles" class="header-img">
+    <div class="category-text">
+      <h1>Categorias</h1>
+      <h2>Selecciona la categoría que deseas para buscar<br>juegos acorde a tus gustos</h2>
     </div>
+  </header>
 
-    <!-- Encabezado -->
-    <header class="header-estilo">
-        <img src="../assets/images/games.jpg" alt="Imagen de controles" class="header-img">
-        <div class="category-text">
-            <h1>Categorias</h1>
-            <h2>Selecciona la categoría que deseas para buscar<br>juegos acorde a tus gustos</h2>
-        </div>
-    </header>
-
-    <!-- Contenido principal -->
-    <div class="body-content">
-        <h1>Categorias</h1>
-        <div class="categories-container">
-            <div class="category-box" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-terror.webp') no-repeat center center; background-size: cover;">
-                <h2>Terror</h2>
-                <p>Siente el miedo por tus venas y<br>sobrevive.</p>
-                <a href="../paginas/categorias/terror.html" class="category-button">Ver Juegos</a>
-            </div>
-            <div class="category-box" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-accion.webp') no-repeat center center; background-size: cover;">
-                <h2>Acción</h2>
-                <p>Parparate para una aventura inolvidable<br>¿que esperas?</p>
-                <a href="../paginas/categorias/accion.html" class="category-button">Ver Juegos</a>
-            </div>
-            <div class="category-box" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-supervivencia.jpg') no-repeat center center; background-size: cover;">
-                <h2>Supervivencia</h2>
-                <p>¿Estas listo para todos los desafios<br>que tienen para ti?</p>
-                <a href="../paginas/categorias/supervivencia.html" class="category-button">Ver Juegos</a>
-            </div>
-            <div class="category-box" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-fantasia.jpg') no-repeat center center; background-size: cover;">
-                <h2>Fantasía</h2>
-                <p>¿Te gusta la alquimia, los combates<br>y la aventura?</p>
-                <a href="../paginas/categorias/fantasia.html" class="category-button">Ver Juegos</a>
-            </div>
-            <div class="category-box" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-simulacion.jpg') no-repeat center center; background-size: cover;">
-                <h2>Simulación</h2>
-                <p>Lleva tus juegos al siguiente nivel<br>y vivelos por ti mismo</p>
-                <a href="../paginas/categorias/simulacion.html" class="category-button">Ver Juegos</a>
-            </div>
-        </div>
+  <!-- Contenido principal -->
+  <div class="body-content">
+    <h1>Categorias</h1>
+    <div class="categories-container">
+      <div class="category-box"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-terror.webp') no-repeat center center; background-size: cover;">
+        <h2>Terror</h2>
+        <p>Siente el miedo por tus venas y<br>sobrevive.</p>
+        <a href="../paginas/categorias/terror.html" class="category-button">Ver Juegos</a>
+      </div>
+      <div class="category-box"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-accion.webp') no-repeat center center; background-size: cover;">
+        <h2>Acción</h2>
+        <p>Parparate para una aventura inolvidable<br>¿que esperas?</p>
+        <a href="../paginas/categorias/accion.html" class="category-button">Ver Juegos</a>
+      </div>
+      <div class="category-box"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-supervivencia.jpg') no-repeat center center; background-size: cover;">
+        <h2>Supervivencia</h2>
+        <p>¿Estas listo para todos los desafios<br>que tienen para ti?</p>
+        <a href="../paginas/categorias/supervivencia.html" class="category-button">Ver Juegos</a>
+      </div>
+      <div class="category-box"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-fantasia.jpg') no-repeat center center; background-size: cover;">
+        <h2>Fantasía</h2>
+        <p>¿Te gusta la alquimia, los combates<br>y la aventura?</p>
+        <a href="../paginas/categorias/fantasia.html" class="category-button">Ver Juegos</a>
+      </div>
+      <div class="category-box"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/images/juegos-simulacion.jpg') no-repeat center center; background-size: cover;">
+        <h2>Simulación</h2>
+        <p>Lleva tus juegos al siguiente nivel<br>y vivelos por ti mismo</p>
+        <a href="../paginas/categorias/simulacion.html" class="category-button">Ver Juegos</a>
+      </div>
     </div>
+  </div>
 
-    <!-- Pie de página (Usamos Bootstrap para la responsividad) -->
-    <footer class="footer">
-        <div class="container">
-          <div class="row align-items-center">
-      
-            <!-- 🔹 Columna Izquierda -->
-            <div class="col-md-4 text-start mb-3 mb-md-0">
-              <div class="footer-brand">SearchGaming</div>
-              <p class="footer-text mb-2">
-                Descubriendo los mejores videojuegos desde 2025.
-              </p>
-              <div class="social-links d-flex gap-3">
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-              </div>
-            </div>
-      
-            <!-- 🔹 Columna Central (Logo) -->
-            <div class="col-md-4 d-flex justify-content-center mb-3 mb-md-0">
-              <img src="../assets/Logo/Logo_SG.png" alt="Logo de Search Gaming" class="footer-logo">
-            </div>
-      
-            <!-- 🔹 Columna Derecha (Enlaces) -->
-            <div class="col-md-4 d-flex justify-content-center justify-content-md-end">
-              <ul class="footer-links list-unstyled d-flex gap-3 mb-0">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../paginas/categorias.html">Categorías</a></li>
-                <li><a href="#">Contacto</a></li>
-              </ul>
-            </div>
-      
-          </div>
-      
-          <!-- 🔻 Derechos reservados -->
-          <div class="text-center mt-2">
-            © 2025 SearchGaming. Todos los derechos reservados.
+  <!-- Pie de página (Usamos Bootstrap para la responsividad) -->
+  <footer class="footer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Columna Izquierda -->
+        <div class="col-md-6 text-center text-md-start">
+          <div class="footer-brand">
+            <span class="text-rosa">Search</span><span class="text-azul">Gaming</span>
+        </div>
+          <p class="footer-text">
+            Descrubiendo los mejores videojuegos desde 2025.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-      </footer>
-      
-      
-      
-      
-      
+        <!-- Columna Derecha -->
+        <div class="col-md-6 d-flex justify-content-center justify-content-md-end">
+          <ul class="footer-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="categorias.html">Categorías</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright text-center">
+        © 2025 SearchGaming. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
 
-    <!-- Enlazar el script al final para evitar problemas de carga -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  <!-- Enlazar el script al final para evitar problemas de carga -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <script src="../scripts/app.js"></script>
+  <script src="../scripts/app.js"></script>
 </body>
 
 </html>
