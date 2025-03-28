@@ -8,7 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     text-align: center;
-    min-height: 100vh;
+    min-height: 130vh;
     overflow-x: hidden; /* Evita el que la pagina no aumente su tamaño horizontalmente */
     display: flex;
     flex-direction: column;
@@ -167,20 +167,20 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 150%;
     object-fit: cover;
     z-index: 0;
 }
 
 .titulo-img {
     position: absolute;
-    top: 0;
+    top: 30px; /* Asegúrate de especificar la unidad */
     left: 50%;
-    transform: translateX(-50%); /* Mueve la imagen hacia la izquierda por la mitad de su ancho */
-    width: 35%;
-    height: 123%;
-    object-fit: cover;
-    z-index: 1; /* Asegura que la imagen del título esté por encima de la imagen de fondo */
+    transform: translateX(-50%);
+    width: 300px;
+    height: auto;
+    object-fit: contain; /* Muestra la imagen completa sin recortar */
+    z-index: 1;
 }
 
 /* Overlay semitransparente para oscurecer la imagen */
@@ -196,10 +196,9 @@ html, body {
 }
 
 /* Aseguramos que el texto o contenido se muestre por encima del overlay */
-
 .header-estilo h2 { 
     margin: 5px 0;   
-    top: 70px; 
+    top: 190px; 
     z-index: 2;
     color: rgb(17, 161, 245);
     text-shadow: 1px 1px 2px rgba(184, 226, 250, 0.856);
@@ -223,7 +222,7 @@ html, body {
     color: white;
     padding: 10px;
     text-align: center;
-    margin-top: -10px;
+    margin-top: 180px;
     flex: 1;
 }
 
@@ -1016,7 +1015,8 @@ html, body {
     }
   
     .titulo-img {
-        width: 100%;
-        height: auto;
+        width: 70%; /* O 80%, según prefieras */
+        max-width: 300px; /* Evita que se haga demasiado grande */
+        top: 50px; /* Ajusta la posición vertical si quieres que baje/suba */
     }
 }
