@@ -1012,9 +1012,14 @@ html, body {
     Integración de logo SG 
    ------------------------------ */
 
-   .logo {
+   .footer-logo {
     width: 80px;
     height: auto;
-    margin-right: 15px;
-    filter: drop-shadow(0 0 8px #00fff7); /* brillo tipo cian */
+    filter: drop-shadow(0 0 8px #00fff7);
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 12px #ff00ff);
   }
